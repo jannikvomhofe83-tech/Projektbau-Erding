@@ -31,8 +31,8 @@ export function Contact14() {
           {/* Right: Google Maps */}
           <div className="overflow-hidden rounded-sm" style={{ minHeight: 280 }}>
             <iframe
-              title="Hoser Bauunternehmen Standort"
-              src="https://maps.google.com/maps?q=Adalbert-Stifter-Weg+29%2C+85570+Markt+Schwaben&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="Projektbau-Erding Standort"
+              src="https://maps.google.com/maps?q=Erding%2C+Bayern&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 280 }}
@@ -57,9 +57,9 @@ export function Contact14() {
             </p>
             <a
               className="font-body text-base font-semibold text-[#0a1020] transition-colors duration-200 hover:text-hoser-gold"
-              href="tel:+498121471100"
+              href="tel:+4917683039047"
             >
-              08121 – 47 11 0
+              0176 83039047
             </a>
           </div>
 
@@ -75,9 +75,9 @@ export function Contact14() {
             </p>
             <a
               className="font-body text-base font-semibold text-[#0a1020] transition-colors duration-200 hover:text-hoser-gold"
-              href="mailto:info@hoser-bauunternehmung.de"
+              href="mailto:info@projektbau-erding.de"
             >
-              info@hoser-bauunternehmung.de
+              info@projektbau-erding.de
             </a>
           </div>
 
@@ -89,8 +89,7 @@ export function Contact14() {
               Standort
             </h3>
             <p className="font-body text-base text-[#0a1020]/60">
-              Adalbert-Stifter-Weg 29<br />
-              85570 Markt Schwaben
+              Erding, Bayern
             </p>
           </div>
         </div>

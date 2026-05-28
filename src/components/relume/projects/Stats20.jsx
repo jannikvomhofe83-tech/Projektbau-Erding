@@ -4,10 +4,10 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const stats = [
-  { value: 547, suffix: "",  label: "Abgeschlossene\nProjekte" },
+  { value: 247, suffix: "",  label: "Abgeschlossene\nProjekte" },
   { value: 98,  suffix: "%", label: "Pünktliche\nFertigstellung" },
   { value: 96,  suffix: "%", label: "Im\nBudgetrahmen" },
-  { value: 70,  suffix: "+", label: "Jahre\nin Bayern" },
+  { value: 20,  suffix: "+", label: "Jahre\nErfahrung" },
 ];
 
 const splitWords = (el, text) => {
@@ -125,7 +125,7 @@ export function Stats20() {
           Ergebnisse, die für sich sprechen
         </h2>
         <p ref={subRef} className="mt-4 max-w-xl font-body text-base text-white/60">
-          Über 70 Jahre Bauen in Bayern. Hunderte von Gebäuden. Ein Ruf.
+          Über 20 Jahre Erfahrung. Über 5.000 zufriedene Kunden. Ein Ruf.
         </p>
       </div>
 
@@ -161,7 +161,7 @@ export function Stats20() {
         <a
           ref={ctaRef}
           href="#projekte"
-          className="inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white/50 transition-colors duration-300 hover:text-hoser-gold"
+          className="inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.15em] text-white/60 transition-colors duration-300 hover:text-hoser-gold"
         >
           Projekte entdecken <span className="text-hoser-gold">→</span>
         </a>

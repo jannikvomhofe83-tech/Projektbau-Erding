@@ -120,10 +120,10 @@ export function Header78() {
       className="relative min-h-screen overflow-hidden"
       style={{ cursor: "none" }}
     >
-      {/* ── Bild 1: Rohbau — vollflächiger Hintergrund ── */}
+      {/* ── Bild 2: vollflächiger Hintergrund ── */}
       <img
-        src="/images/bild1.png"
-        alt="Gebäude im Rohbau"
+        src="/images/hero-bild2.png"
+        alt="Projektbau-Erding"
         className="hero-bg-img absolute inset-0 h-full w-full object-cover object-center"
         style={{ willChange: "transform" }}
       />
@@ -137,11 +137,11 @@ export function Header78() {
         }}
       />
 
-      {/* ── Bild 2: Fertig — Hover-Reveal (clip-path driven directly via DOM) ── */}
+      {/* ── Bild 1: Hover-Reveal (clip-path driven directly via DOM) ── */}
       <img
         ref={imageRef}
-        src="/images/bild2.png"
-        alt="Fertiggestelltes Gebäude"
+        src="/images/hero-bild1.png"
+        alt="Projektbau-Erding Detail"
         className="absolute inset-0 h-full w-full object-cover object-center"
         style={{
           clipPath: "circle(0px at 50% 50%)",
@@ -177,7 +177,7 @@ export function Header78() {
           <span className="hero-eyebrow-line h-px w-10 flex-shrink-0 bg-hoser-gold" />
           <div style={{ overflow: "hidden" }}>
             <p className="hero-eyebrow-inner font-body text-xs font-semibold uppercase tracking-[0.25em] text-white/50">
-              Markt Schwaben · Gegründet 1952
+              Erding · München · Ebersberg
             </p>
           </div>
         </div>
@@ -189,22 +189,22 @@ export function Header78() {
         >
           <span className="block" style={{ overflow: "hidden", paddingBottom: "0.1em" }}>
             <span className="hero-headline-inner block">
-              Bauen,{" "}
-              <em className="italic">das bleibt.</em>
+              Renovieren,{" "}
+              <em className="italic">wie es sein soll.</em>
             </span>
           </span>
           <span className="block" style={{ overflow: "hidden", paddingBottom: "0.1em" }}>
             <span className="hero-headline-inner block">
-              Seit drei Generationen.
+              Ihr Traum, unser Handwerk.
             </span>
           </span>
         </h1>
 
         {/* Body */}
         <p className="hero-body mb-10 max-w-[420px] font-body text-base leading-relaxed text-white/55 md:text-lg">
-          Hochbau, Sanierung, Tiefbau, Ingenieurbau und Gewerbebau aus Markt Schwaben.
-          Hoser Bauunternehmung steht seit 1952 für meisterliche Handwerkskunst,
-          Termintreue und Bauwerke, die Generationen überdauern.
+          Trockenbau, Altbausanierung und Innenausbau aus Erding.
+          Projektbau-Erding steht für fachgerechte Arbeit, Ehrlichkeit
+          und Sauberkeit – bei jedem Auftrag, groß oder klein.
         </p>
 
         {/* CTAs */}

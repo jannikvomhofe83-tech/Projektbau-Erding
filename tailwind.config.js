@@ -14,19 +14,19 @@ export default {
       },
       colors: {
         background: {
-          primary: "#08111F",
-          secondary: "#0C1828",
-          alternative: "#040A14",
+          primary: "#FFFFFF",
+          secondary: "#F4F7FA",
+          alternative: "#EDF0F4",
         },
         text: {
-          DEFAULT: "#FFFFFF",
-          primary: "#FFFFFF",
+          DEFAULT: "#08111F",
+          primary: "#08111F",
           secondary: "#6B82A0",
           alternative: "#08111F",
         },
         border: {
-          primary: "#162236",
-          alternative: "rgba(255,255,255,0.10)",
+          primary: "#D0D8E4",
+          alternative: "rgba(8,17,31,0.10)",
         },
         hoser: {
           gold: "#C8962E",
@@ -35,8 +35,8 @@ export default {
           charcoal: "#08111F",
           stone: "#6B82A0",
           navy: "#08111F",
-          "navy-light": "#0C1828",
-          "navy-deep": "#040A14",
+          "navy-light": "#F4F7FA",
+          "navy-deep": "#EDF0F4",
         },
         neutral: {
           lightest: "#FFFFFF",

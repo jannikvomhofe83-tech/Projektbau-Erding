@@ -37,7 +37,7 @@ export function ProzessCTA() {
     <section
       ref={sectionRef}
       className="relative min-h-screen w-full overflow-hidden flex items-center"
-      style={{ background: "#040A16" }}
+      style={{ background: "#FFFFFF" }}
     >
       {/* Background photo */}
       <img
@@ -45,7 +45,7 @@ export function ProzessCTA() {
         alt=""
         aria-hidden="true"
         className="cta-bg absolute inset-0 h-full w-full object-cover object-center"
-        style={{ willChange: "transform", opacity: 0.42 }}
+        style={{ willChange: "transform", opacity: 0.10 }}
       />
 
       {/* Gradient overlay (heavy on the left where text sits) */}
@@ -53,7 +53,7 @@ export function ProzessCTA() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(115deg, rgba(4,10,22,0.98) 0%, rgba(4,10,22,0.86) 38%, rgba(4,10,22,0.55) 78%, rgba(4,10,22,0.4) 100%)",
+            "linear-gradient(115deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.90) 38%, rgba(255,255,255,0.75) 78%, rgba(255,255,255,0.55) 100%)",
         }}
       />
 
@@ -66,7 +66,7 @@ export function ProzessCTA() {
           width: "55vw", height: "55vw",
           borderRadius: "50%",
           background:
-            "radial-gradient(closest-side, rgba(200,150,46,0.16), transparent 70%)",
+            "radial-gradient(closest-side, rgba(200,150,46,0.25), transparent 70%)",
           filter: "blur(60px)",
         }}
       />
@@ -78,8 +78,8 @@ export function ProzessCTA() {
         style={{
           opacity: 0.5,
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px)," +
-            "linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
+            "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px)," +
+            "linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
         }}
       />
@@ -104,7 +104,7 @@ export function ProzessCTA() {
           transform: "translateY(-50%)",
           fontFamily: "Syne, sans-serif", fontWeight: 900,
           fontSize: "clamp(10rem, 22vw, 24rem)",
-          color: "rgba(200,150,46,0.05)",
+          color: "rgba(200,150,46,0.12)",
           letterSpacing: "-0.06em",
           lineHeight: 1,
           userSelect: "none",
@@ -125,14 +125,14 @@ export function ProzessCTA() {
         </div>
 
         <div style={{ overflow: "hidden" }} className="mb-5">
-          <p className="cta-eyebrow font-body text-xs uppercase tracking-[0.28em] text-white/45">
+          <p className="cta-eyebrow font-body text-xs uppercase tracking-[0.28em] text-[#08111F]/50">
             Bereit anzufangen?
           </p>
         </div>
 
         {/* Heading */}
         <h2
-          className="font-heading font-bold tracking-tight text-white mb-10"
+          className="font-heading font-bold tracking-tight text-[#08111F] mb-10"
           style={{ fontSize: "clamp(2.4rem, 5.2vw, 5.6rem)", lineHeight: 1.04 }}
         >
           <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
@@ -148,10 +148,10 @@ export function ProzessCTA() {
           </span>
         </h2>
 
-        <p className="cta-sub max-w-[460px] font-body text-base leading-relaxed text-white/55 md:text-lg mb-12">
-          Egal ob Neubau, Sanierung oder Umbau – wir starten mit einem
-          unverbindlichen Erstgespräch bei Ihnen vor Ort. Kostenfrei und
-          ohne weitere Verpflichtung.
+        <p className="cta-sub max-w-[460px] font-body text-base leading-relaxed text-[#08111F]/65 md:text-lg mb-12">
+          Egal ob Trockenbau, Altbausanierung oder Innenausbau – wir starten
+          mit einem unverbindlichen Erstgespräch bei Ihnen vor Ort. Kostenfrei
+          und ohne weitere Verpflichtung.
         </p>
 
         {/* Buttons */}
@@ -160,7 +160,7 @@ export function ProzessCTA() {
           <a
             href="#kontakt"
             className="cta-btn group relative inline-flex items-center gap-4 overflow-hidden px-8 py-[18px] font-body text-[0.7rem] font-semibold uppercase tracking-[0.22em]"
-            style={{ background: "#C8962E", color: "#040A16" }}
+            style={{ background: "#C8962E", color: "#FFFFFF" }}
           >
             <span className="relative z-10">Erstgespräch vereinbaren</span>
             <svg
@@ -182,16 +182,16 @@ export function ProzessCTA() {
 
           {/* Secondary: phone link */}
           <a
-            href="tel:+498912345678"
-            className="cta-btn group inline-flex items-center gap-4 font-body text-[0.7rem] uppercase tracking-[0.22em] text-white/65 transition-colors hover:text-white"
+            href="tel:+4917683039047"
+            className="cta-btn group inline-flex items-center gap-4 font-body text-[0.7rem] uppercase tracking-[0.22em] text-[#08111F]/65 transition-colors hover:text-[#08111F]"
           >
             <span>Direkt anrufen</span>
-            <span className="block h-px w-6 transition-all duration-500 group-hover:w-12 bg-white/25 group-hover:bg-hoser-gold" />
+            <span className="block h-px w-6 transition-all duration-500 group-hover:w-12 bg-[#08111F]/25 group-hover:bg-hoser-gold" />
             <span
-              className="text-sm font-semibold tracking-[0.05em] text-white/85"
+              className="text-sm font-semibold tracking-[0.05em] text-[#08111F]/90"
               style={{ fontFamily: "Syne, sans-serif" }}
             >
-              +49 89 1234 5678
+              0176 83039047
             </span>
           </a>
         </div>
@@ -199,31 +199,31 @@ export function ProzessCTA() {
         {/* Meta row */}
         <div
           className="flex flex-wrap gap-x-14 gap-y-5 pt-10"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
+          style={{ borderTop: "1px solid rgba(8,17,31,0.12)" }}
         >
           <div className="cta-meta">
-            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">
+            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-[#08111F]/40 mb-2">
               Kontakt
             </p>
-            <p className="font-body text-sm text-white/85">info@hoser-bau.de</p>
+            <p className="font-body text-sm text-[#08111F]/90">info@projektbau-erding.de</p>
           </div>
           <div className="cta-meta">
-            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">
+            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-[#08111F]/40 mb-2">
               Standort
             </p>
-            <p className="font-body text-sm text-white/85">München · Bayern</p>
+            <p className="font-body text-sm text-[#08111F]/90">Erding · Bayern</p>
           </div>
           <div className="cta-meta">
-            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">
-              Beratung
+            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-[#08111F]/40 mb-2">
+              Erreichbar
             </p>
-            <p className="font-body text-sm text-white/85">Mo – Fr · 8 – 18 Uhr</p>
+            <p className="font-body text-sm text-[#08111F]/90">Rund um die Uhr</p>
           </div>
           <div className="cta-meta">
-            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-white/30 mb-2">
+            <p className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-[#08111F]/40 mb-2">
               Antwortzeit
             </p>
-            <p className="font-body text-sm text-white/85">Innerhalb von 24h</p>
+            <p className="font-body text-sm text-[#08111F]/90">Schnellstmöglich</p>
           </div>
         </div>
       </div>

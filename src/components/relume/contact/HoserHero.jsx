@@ -3,16 +3,16 @@
 import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
-// BAUUNTERNEHMEN letter indices each HOSER letter "owns"
-// B A U U N T E R N E  H  M  E  N
+// ERDING BAUWERK letter indices each BAUEN letter "owns"
+// E R D I N G   B A U  W  E  R  K
 // 0 1 2 3 4 5 6 7 8 9 10 11 12 13
-const BAU = "BAUUNTERNEHMEN".split("");
+const BAU = "ERDING BAUWERK".split("");
 const MAPPING = [
-  [0, 1],           // H → B A
-  [2, 3],           // O → U U
-  [4, 5, 6],        // S → N T E
-  [7, 8, 9],        // E → R N E
-  [10, 11, 12, 13], // R → H M E N
+  [0, 1],           // B → E R
+  [2, 3],           // A → D I
+  [4, 5, 6],        // U → N G ' '
+  [7, 8, 9],        // E → B A U
+  [10, 11, 12, 13], // N → W E R K
 ];
 
 const BAU_META = BAU.map((_, idx) => {
@@ -235,7 +235,7 @@ export function HoserHero() {
                 animation: "hoserAlgaeFlow 14s ease infinite",
                 userSelect: "none",
               }}>
-                HOSER
+                BAUEN
               </h1>
             </div>
 

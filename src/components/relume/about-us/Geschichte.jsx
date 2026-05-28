@@ -3,44 +3,38 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Lightbulb, Hammer, Star, Handshake } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const milestones = [
   {
-    year: "1952",
-    title: "Die Gründung",
-    desc: "Michael Hoser gründet das Unternehmen als kleinen Maurerbetrieb mit drei Mitarbeitern in Markt Schwaben. Handwerk, Verlässlichkeit und Qualität sind von Anfang an die Grundwerte.",
-    detail: "Was als bescheidener Familienbetrieb begann, legte den Grundstein für eine über siebzigjährige Erfolgsgeschichte im bayerischen Bauhandwerk.",
-    img: "/images/timeline/1952.jpg",
+    year: "Die Idee",
+    title: "Ein Traum entsteht",
+    desc: "Mustafa gründet Projektbau-Erding mit einer klaren Vision: Trockenbau und Altbausanierung auf höchstem Niveau – zuverlässig, ehrlich und sauber.",
+    detail: "Von Anfang an steht Mustafa persönlich für jeden Auftrag. Ob kleine Reparatur oder große Sanierung – er ist flexibel und nimmt jeden Kunden ernst.",
+    Icon: Lightbulb,
   },
   {
-    year: "1970er",
-    title: "Zweite Generation",
-    desc: "Die Söhne Dieter und Manfred Hoser übernehmen den Betrieb und bauen ihn konsequent aus. Das Team wächst auf rund 30 Mitarbeiter.",
-    detail: "Das Leistungsspektrum erweitert sich auf Hoch-, Tief- und Kanalbau. Die Eigenständigkeit durch eigenes Fachpersonal wird zum Markenzeichen.",
-    img: "/images/timeline/1970.jpg",
+    year: "Die Arbeit",
+    title: "Fachbetrieb & Spezialisierung",
+    desc: "Projektbau-Erding spezialisiert sich auf Trockenbau, Altbausanierung, Innenausbau und Malerarbeiten. Das Leistungsspektrum wächst mit den Kundenanforderungen.",
+    detail: "Dank persönlichem Einsatz und fachgerechter Ausführung entstehen die ersten begeisterten Stammkunden – die Basis für eine starke Empfehlungskultur.",
+    Icon: Hammer,
   },
   {
-    year: "1990er",
-    title: "Wachstum & Modernisierung",
-    desc: "Investitionen in einen umfangreichen Maschinenpark und die Ausbildung eigener Fachkräfte sichern Unabhängigkeit und Qualität auf höchstem Niveau.",
-    detail: "Hoser entwickelt sich zu einem der führenden Bauunternehmen im Großraum München – mit über 60 festangestellten Mitarbeitern.",
-    img: "/images/timeline/1990.jpg",
-  },
-  {
-    year: "2010er",
-    title: "Dritte Generation",
-    desc: "Claudia Hoser und Josef Lippacher übernehmen die Geschäftsführung. Sie führen das Familienunternehmen mit modernen Strukturen in die Zukunft.",
-    detail: "Der Anspruch bleibt derselbe: Qualität, Termintreue und Festpreisgarantie. Neue digitale Prozesse ergänzen das bewährte Handwerk.",
-    img: "/images/timeline/2010.jpg",
+    year: "Die Anerkennung",
+    title: "Über 5.000 Bewertungen",
+    desc: "Auf My-Hammer erreicht Projektbau-Erding über 5.012 Bewertungen von zufriedenen Kunden. Gleichzeitig wächst die Google-Bewertung auf 5 von 5 Sternen.",
+    detail: "Die Kundenstimmen sprechen für sich: professionelle Ausführung, freundliches Auftreten und herausragende Sauberkeit sind die häufigsten Lobpunkte.",
+    Icon: Star,
   },
   {
     year: "Heute",
-    title: "70+ Jahre Baukultur",
-    desc: "Über 70 Jahre nach der Gründung steht Hoser Bauunternehmen für bayerisches Handwerk auf höchstem Niveau. Über 500 abgeschlossene Projekte sprechen für sich.",
-    detail: "Mit eigenem Fachpersonal, modernem Maschinenpark und einem starken regionalen Netzwerk bauen wir an der Zukunft des Großraums München.",
-    img: "/images/timeline/heute.jpg",
+    title: "Ihr Traumpartner",
+    desc: "Projektbau-Erding ist rund um die Uhr erreichbar und steht für jedes Projekt bereit – von der Wohnungssanierung bis zur Fassadenrenovierung.",
+    detail: "Mustafa und sein Team freuen sich auf Ihre Anfrage. Kostenloses Angebot, persönliche Beratung und meisterhafte Ausführung sind garantiert.",
+    Icon: Handshake,
   },
 ];
 
@@ -132,12 +126,9 @@ export function Geschichte() {
         );
       });
 
-      // Each milestone card slides in from the right + image clip-path wipe
+      // Each milestone card slides in from the right
       cardRefs.current.forEach((card) => {
         if (!card) return;
-        const img = card.querySelector("[data-milestone-img]");
-        const innerImg = img?.querySelector("img");
-
         gsap.fromTo(
           card,
           { opacity: 0, x: 60 },
@@ -153,21 +144,6 @@ export function Geschichte() {
             },
           }
         );
-
-        if (img) {
-          gsap.set(img, { clipPath: "inset(0 0 100% 0)" });
-          gsap.set(innerImg, { scale: 1.2 });
-
-          gsap.timeline({
-            scrollTrigger: {
-              trigger: card,
-              start: "top 78%",
-              toggleActions: "play none none reverse",
-            },
-          })
-            .to(img, { clipPath: "inset(0 0 0% 0)", duration: 1.0, ease: "expo.inOut" }, 0.2)
-            .to(innerImg, { scale: 1, duration: 1.3, ease: "power3.out" }, 0.3);
-        }
       });
 
     }, sectionRef);
@@ -198,7 +174,7 @@ export function Geschichte() {
         <div className="container relative z-10">
           <div className="max-w-2xl">
             <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A84C]">
-              Seit 1952
+              Seit Jahren
             </p>
             <h2
               ref={headingRef}
@@ -208,7 +184,7 @@ export function Geschichte() {
               Unsere Geschichte
             </h2>
             <p ref={subRef} className="font-body text-base leading-relaxed text-[#0a1020]/55">
-              Drei Generationen. Eine Familie.<br />Ein Anspruch: Bauen, das hält.
+              Ehrlichkeit. Sauberkeit. Zuverlässigkeit.<br />Das sind die Werte, die uns antreiben.
             </p>
           </div>
         </div>
@@ -298,18 +274,9 @@ export function Geschichte() {
                     </p>
                   </div>
 
-                  {/* Milestone image */}
-                  <div data-milestone-img className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-md">
-                    <img
-                      src={m.img}
-                      alt={m.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent" />
-                    <span className="absolute bottom-3 left-4 font-body text-[10px] font-semibold uppercase tracking-[0.3em] text-white/85">
-                      {m.year}
-                    </span>
+                  {/* Milestone icon */}
+                  <div className="flex items-center justify-center aspect-[4/3] rounded-sm border border-[#C9A84C]/25 bg-[#f8f7f4]">
+                    <m.Icon size={56} strokeWidth={1.2} color="#C9A84C" />
                   </div>
                 </div>
               </div>

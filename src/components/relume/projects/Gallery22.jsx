@@ -5,28 +5,28 @@ import { gsap } from "../../../utils/gsap";
 
 const photos = [
   {
-    src: "/images/hero-aerial-construction.jpg",
-    caption: "Luftaufnahme einer aktiven Baustelle – präzise Koordination aller Gewerke von Beginn an.",
+    src: "/images/bild16.png",
+    caption: "Unser Team bei der Arbeit – fachgerecht, sauber und termingerecht.",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "/images/bild10.jpg",
-    caption: "Rohbauarbeiten mit eigenem Fachpersonal – keine Werklohnfirmen, volle Kontrolle.",
+    src: "/images/bild5.png",
+    caption: "Handwerk als Berufung – Mustafa und sein Team mit vollem Einsatz.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/bild11.jpg",
-    caption: "Sichtbetonbau auf höchstem Niveau – präzise Schalung und makellose Oberflächen.",
+    src: "/images/bild10.png",
+    caption: "Trockenbau auf höchstem Niveau – präzise und sauber ausgeführt.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/bild12.jpg",
-    caption: "Tiefbau und Erschließung – millimetergenaue Arbeit tief im Erdreich.",
+    src: "/images/bild12.png",
+    caption: "Malerarbeiten innen und außen – sauber, präzise und termingerecht.",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "/images/bild13.jpg",
-    caption: "Fertigstellung und Übergabe – pünktlich, im Budgetrahmen, mit Festpreisgarantie.",
+    src: "/images/bild20.jpeg",
+    caption: "Persönlicher Einsatz vor Ort – Mustafa begleitet jeden Auftrag selbst.",
     span: "col-span-1 row-span-1",
   },
 ];

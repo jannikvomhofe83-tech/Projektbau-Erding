@@ -1,6 +1,6 @@
 import React from "react";
 import { Header78 } from "./Header78";
-import { VideoSection } from "./VideoSection";
+import { Partner } from "./Partner";
 import { Layout237 } from "./Layout237";
 import { Stats17 } from "./Stats17";
 import { Gallery9 } from "./Gallery9";
@@ -13,10 +13,7 @@ export default function Page() {
     <div>
       <Header78 />
 
-      <VideoSection />
-
-      {/* dark → light */}
-      <SectionTransition light />
+      <Partner />
 
       <Layout237 />
 

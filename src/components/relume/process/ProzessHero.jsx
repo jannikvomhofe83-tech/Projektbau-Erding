@@ -27,7 +27,7 @@ export function ProzessHero() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen overflow-hidden flex items-start">
+    <section ref={sectionRef} className="relative min-h-screen overflow-hidden flex items-center">
       {/* Inline keyframes for the scroll-dot */}
       <style>{`
         @keyframes prozess-hero-dot-move {
@@ -43,8 +43,8 @@ export function ProzessHero() {
 
       {/* Background image */}
       <img
-        src="/images/prozess-hero.jpg"
-        alt="Hoser Bauunternehmen – Prozess"
+        src="/images/bild15.png"
+        alt="Projektbau-Erding – Prozess"
         className="prozess-hero-bg absolute inset-0 h-full w-full object-cover object-center"
         style={{ willChange: "transform" }}
       />
@@ -57,7 +57,7 @@ export function ProzessHero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 px-[6%] pt-32 pb-24 md:pt-36 lg:pt-44 md:max-w-[55%] lg:max-w-[50%]">
+      <div className="relative z-10 px-[6%] pt-24 pb-36 md:pt-28 lg:pt-32 lg:pb-48 md:max-w-[55%] lg:max-w-[50%]">
         <div className="mb-10 flex items-center gap-4">
           <span className="prozess-hero-line h-px w-10 flex-shrink-0 bg-hoser-gold" />
           <div style={{ overflow: "hidden" }}>
@@ -79,8 +79,8 @@ export function ProzessHero() {
         </h1>
 
         <p className="prozess-hero-sub max-w-[400px] font-body text-base leading-relaxed text-white/55 md:text-lg">
-          Fünf klar definierte Schritte. Festpreise, Termintreue und volle
-          Transparenz – von der ersten Beratung bis zur Schlüsselübergabe.
+          Fünf klare Schritte – vom ersten Gespräch bis zur sauberen Übergabe.
+          Transparent, zuverlässig und termingerecht.
         </p>
 
         {/* CTA (mobile / tablet — desktop CTA lives next to the scroll indicator) */}

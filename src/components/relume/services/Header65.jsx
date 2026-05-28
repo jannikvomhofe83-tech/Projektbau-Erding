@@ -25,7 +25,7 @@ export function Header65() {
         <img
           src="/images/craftsmen-stone-facade.jpg"
           className="size-full object-cover"
-          alt="Hoser Bauunternehmung Leistungen"
+          alt="Projektbau-Erding Leistungen"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
       </div>

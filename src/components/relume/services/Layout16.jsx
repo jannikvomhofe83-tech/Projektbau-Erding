@@ -4,9 +4,9 @@ import React, { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const points = [
-  "Eigenes, ausgebildetes Fachpersonal – kein Rückgriff auf Werklohnfirmen",
-  "Umfangreicher Maschinen- und Fuhrpark für alle Gewerke",
-  "Direkte Kommunikation mit der Geschäftsführung",
+  "Fachgerechte Ausführung durch geschultes Personal – Mustafa ist persönlich dabei",
+  "Kostenlose Angebotserstellung – ob kleine oder große Aufträge",
+  "Rund um die Uhr erreichbar – 24/7 für Ihre Anfragen",
 ];
 
 // Helper: split text into char spans
@@ -42,7 +42,7 @@ const splitWords = (el, text) => {
 
 export function Layout16() {
   const sectionRef = useRef(null);
-  const videoRef   = useRef(null);
+  const imageRef   = useRef(null);
   const overlayRef = useRef(null);
   const eyebrowRef = useRef(null);
   const headingRef = useRef(null);
@@ -52,9 +52,9 @@ export function Layout16() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Video parallax: subtle scale + brightness scrub
-      if (videoRef.current) {
-        gsap.fromTo(videoRef.current,
+      // Image parallax: subtle scale + brightness scrub
+      if (imageRef.current) {
+        gsap.fromTo(imageRef.current,
           { scale: 1.15, filter: "brightness(0.6)" },
           {
             scale: 1.0, filter: "brightness(1)",
@@ -160,15 +160,12 @@ export function Layout16() {
 
   return (
     <section ref={sectionRef} className="relative px-[5%] py-16 md:py-24 lg:py-28 overflow-hidden">
-      {/* Background video */}
-      <video
-        ref={videoRef}
-        src="/videos/video5.mp4"
+      {/* Background image */}
+      <img
+        ref={imageRef}
+        src="/images/bild6.png"
+        alt="Warum Projektbau-Erding"
         className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
         style={{ willChange: "transform, filter" }}
       />
       {/* Dark overlay */}
@@ -179,23 +176,23 @@ export function Layout16() {
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <p ref={eyebrowRef} className="mb-4 font-body text-sm font-semibold uppercase tracking-[0.25em] text-hoser-gold">
-              Warum Hoser
+              Warum Projektbau-Erding
             </p>
             <h2
               ref={headingRef}
               className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl"
             >
-              Kompetenz und Terminsicherheit – garantiert.
+              Ehrlichkeit und Sauberkeit – das ist unser Versprechen.
             </h2>
             <p
               ref={paraRef}
-              data-text="Durch geschultes Personal, neueste Technik und einen umfangreichen Maschinenpark bieten wir Ihnen ein Know-how, das Kompetenz und Terminsicherheit garantiert. Hoher Qualitätsstandard der verarbeiteten Materialien und erfahrene Fachkräfte bürgen für zuverlässige Ausführung."
+              data-text="Als Fachbetrieb für Trockenbau und Altbausanierung legen wir besonderen Wert auf fachgerechte Arbeit, Ehrlichkeit und Sauberkeit. Ob kleine Reparatur oder große Sanierung – wir sind flexibel, zuverlässig und stets persönlich erreichbar."
               className="mb-6 font-body text-base leading-relaxed text-white/90 md:text-lg"
             >
-              Durch geschultes Personal, neueste Technik und einen umfangreichen
-              Maschinenpark bieten wir Ihnen ein Know-how, das Kompetenz und
-              Terminsicherheit garantiert. Hoher Qualitätsstandard der verarbeiteten
-              Materialien und erfahrene Fachkräfte bürgen für zuverlässige Ausführung.
+              Als Fachbetrieb für Trockenbau und Altbausanierung legen wir
+              besonderen Wert auf fachgerechte Arbeit, Ehrlichkeit und Sauberkeit.
+              Ob kleine Reparatur oder große Sanierung – wir sind flexibel,
+              zuverlässig und stets persönlich erreichbar.
             </p>
             <ul ref={listRef} className="mb-8 space-y-4">
               {points.map((p) => (

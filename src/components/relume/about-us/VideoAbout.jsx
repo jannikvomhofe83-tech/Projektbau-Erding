@@ -33,7 +33,7 @@ export function VideoAbout() {
     const ctx = gsap.context(() => {
       gsap.set(eyebrowRef.current, { y: 22, opacity: 0 });
       const headingWords = headingRef.current
-        ? splitWords(headingRef.current, "Drei Generationen. Eine Überzeugung.")
+        ? splitWords(headingRef.current, "Qualität. Ehrlichkeit. Sauberkeit.")
         : [];
       gsap.set(headingWords, { yPercent: 110 });
       gsap.set(videoWrapRef.current, { clipPath: "inset(0 100% 0 0)" });
@@ -77,14 +77,14 @@ export function VideoAbout() {
         {/* Text above */}
         <div className="mb-8 md:mb-10">
           <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-hoser-gold">
-            1952 bis heute
+            Projektbau-Erding
           </p>
           <h2
             ref={headingRef}
             className="font-heading font-bold text-text-primary leading-tight"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#0a1020" }}
           >
-            Drei Generationen. Eine Überzeugung.
+            Qualität. Ehrlichkeit. Sauberkeit.
           </h2>
         </div>
 
@@ -103,9 +103,9 @@ export function VideoAbout() {
 
         {/* Text below */}
         <p ref={paraRef} className="mt-6 font-body text-base leading-relaxed text-[#0a1020]/60 md:text-lg max-w-xl">
-          Was Michael Hoser 1952 mit drei Mitarbeitern begann, tragen heute
-          über 60 Fachkräfte weiter. Die Werte haben sich nicht verändert –
-          nur die Möglichkeiten, sie umzusetzen.
+          Mustafa und sein Team stehen für fachgerechte Arbeit, persönliche Beratung
+          und höchste Sauberkeit. Lassen Sie sich von uns ein kostenloses Angebot geben –
+          wir freuen uns auf Ihre Anfrage.
         </p>
 
       </div>

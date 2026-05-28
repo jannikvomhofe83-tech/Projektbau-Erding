@@ -6,18 +6,19 @@ import { gsap } from "../../../utils/gsap";
 const features = [
   {
     title: "Handwerk als Berufung",
-    body: "Gegründet 1952 von Michael Hoser als Maurerfirma mit drei Mitarbeitern. Heute führen wir das Unternehmen in der dritten Generation – mit denselben Werten, aber modernster Technik und eigenem, ausgebildetem Fachpersonal.",
-    image: "/images/craftsmen-stone-facade.jpg",
+    body: "Als Fachbetrieb für Trockenbau und Altbausanierung legen wir besonderen Wert auf fachgerechte Arbeiten, Ehrlichkeit und Sauberkeit. Ob kleine Reparatur oder komplette Sanierung – wir sind flexibel und zuverlässig.",
+    image: "/images/bild5.png",
   },
   {
     title: "Verlässlichkeit",
-    body: "Klare Angebote, transparente Zeitpläne, direkte Kommunikation. Wir koordinieren Architekten, Ingenieure und Fachgewerke – Sie haben einen Ansprechpartner von der ersten Besprechung bis zur Schlüsselübergabe.",
-    image: "/images/team-blueprints.jpg",
+    body: "Klare Angebote, transparente Preise, direkte Kommunikation. Von der ersten Beratung bis zur fertigen Übergabe haben Sie einen persönlichen Ansprechpartner – Mustafa und sein Team stehen Ihnen zur Seite.",
+    image: "/images/bild6.png",
   },
   {
-    title: "Verwurzelt in der Region",
-    body: "Markt Schwaben ist unser Zuhause. Seit über 70 Jahren bauen wir im Raum Ebersberg, Erding und München-Ost. Wir kennen die lokalen Behörden, Genehmigungsverfahren und die Anforderungen dieser Region.",
-    image: "/images/munich-residential.jpg",
+    title: "Verwurzelt in Erding",
+    body: "Erding ist unser Zuhause. Wir kennen die Region, die lokalen Anforderungen und unsere Kunden persönlich. Ihr Traum ist unser Auftrag – wir freuen uns auf Ihre Anfrage.",
+    image: "/images/bild-verwurzelt.png",
+    objectPosition: "50% 57%",
   },
 ];
 
@@ -124,7 +125,7 @@ export function Layout237() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-background-primary px-[5%] py-16 md:py-24 lg:py-28">
+    <section ref={sectionRef} className="bg-white px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
 
         {/* Heading */}
@@ -133,7 +134,7 @@ export function Layout237() {
             Unsere Philosophie
           </p>
           <h2
-            className="font-heading font-bold leading-[1.05] tracking-tight text-text-primary"
+            className="font-heading font-bold leading-[1.05] tracking-tight text-[#08111F]"
             style={{ fontSize: "clamp(2.4rem, 4.5vw, 4.5rem)" }}
           >
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
@@ -141,7 +142,7 @@ export function Layout237() {
             </span>
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
               <span className="l237-heading-inner block">
-                <em className="font-serif font-light not-italic text-text-secondary">
+                <em className="font-serif font-light not-italic text-[#6B82A0]">
                   Wie wir bauen.
                 </em>
               </span>
@@ -165,7 +166,7 @@ export function Layout237() {
                   src={f.image}
                   alt={f.title}
                   className="l237-card-img absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
-                  style={{ willChange: "transform" }}
+                  style={{ willChange: "transform", objectPosition: f.objectPosition ?? "center" }}
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10" />
@@ -216,7 +217,7 @@ export function Layout237() {
           </a>
           <a
             href="/ueber-uns"
-            className="l237-cta inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.1em] text-text-secondary transition-colors duration-200 hover:text-text-primary"
+            className="l237-cta inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#6B82A0] transition-colors duration-200 hover:text-[#08111F]"
           >
             Unsere Geschichte
             <span className="text-hoser-gold">→</span>

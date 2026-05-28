@@ -1,37 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const slideshowImages = [
+  "/images/hero-bild1.png",
+  "/images/hero-bild2.png",
+  "/images/bild5.png",
+  "/images/bild6.png",
+  "/images/bild7.png",
+  "/images/bild8.png",
+  "/images/bild9.png",
+];
 
 const faqs = [
   {
-    q: "Welche Leistungen bietet Hoser Bauunternehmung an?",
-    a: "Wir führen Baumeisterarbeiten im Hochbau, Erd- und Kanalbau aus. Dazu gehören Neubau, Sanierung und Umbau von Wohn-, Gewerbe- und Ingenieurbauwerken – auch mit höchstem Schwierigkeitsgrad.",
+    q: "Welche Leistungen bietet Projektbau-Erding an?",
+    a: "Wir sind Fachbetrieb für Trockenbau und Altbausanierung. Dazu gehören Innenausbau, Malerarbeiten, Fassadenrenovierung und Dachgeschossausbau – ob kleine oder große Aufträge, wir sind flexibel.",
     image: "/images/craftsmen-stone-facade.jpg",
   },
   {
-    q: "Wie lange sind Sie schon im Geschäft?",
-    a: "Seit 1952. Gegründet von Michael Hoser als Maurerfirma mit 3 Mitarbeitern, ist das Unternehmen heute unter Claudia Hoser und Josef Lippacher bereits in der dritten Generation tätig.",
+    q: "Bieten Sie auch kostenlose Angebote an?",
+    a: "Ja, selbstverständlich. Lassen Sie sich von uns ein kostenloses Angebot erstellen – wir beraten Sie gerne und melden uns schnellstmöglich.",
     image: "/images/villa-twilight.jpg",
   },
   {
     q: "Welche Regionen betreuen Sie?",
-    a: "Unser Schwerpunkt liegt im Raum Ebersberg, Erding und München-Ost. Unser Firmensitz ist in Markt Schwaben – wir sind seit Jahrzehnten verwurzelt in dieser Region.",
+    a: "Unser Schwerpunkt liegt im Raum Erding und München. Wir sind flexibel und kommen auch für größere Projekte weiter in der Region.",
     image: "/images/munich-residential.jpg",
   },
   {
-    q: "Arbeiten Sie mit eigenem Personal oder Subunternehmern?",
-    a: "Wir legen großen Wert auf eigenes, ausgebildetes Fachpersonal. Durch konsequente Lehrlingsausbildung sichern wir einen Personalstamm auf konstant hohem Niveau – ohne Abhängigkeit von Werklohnfirmen.",
+    q: "Wie sind Ihre Öffnungszeiten?",
+    a: "Wir sind rund um die Uhr erreichbar – 24/7. Rufen Sie uns einfach an oder schreiben Sie uns, wir antworten schnellstmöglich.",
     image: "/images/team-blueprints.jpg",
   },
   {
-    q: "Können Sie auch denkmalgeschützte Gebäude sanieren?",
-    a: "Ja. Wir haben langjährige Erfahrung in der Sanierung denkmalgeschützter Gebäude, Kirchen und historischer Bausubstanz – darunter mehrere Projekte für das Erzbischöfliche Ordinariat München.",
+    q: "Können Sie auch Wohnungssanierungen übernehmen?",
+    a: "Ja. Wir haben Erfahrung in der Komplettsanierung von Wohnungen – wie zum Beispiel die Sanierung im Olympiadorf München. Ehrlichkeit und Sauberkeit stehen bei uns an erster Stelle.",
     image: "/images/interior-oak-concrete.jpg",
   },
   {
     q: "Wie nehme ich Kontakt auf?",
-    a: "Rufen Sie uns an unter 08121 – 47 11 0 oder schreiben Sie uns an info@hoser-bauunternehmung.de. Wir melden uns schnellstmöglich für ein erstes Gespräch.",
+    a: "Rufen Sie uns an unter 0176 83039047 oder schreiben Sie uns an info@projektbau-erding.de. Wir freuen uns auf Ihre Anfrage.",
     image: "/images/villa-twilight.jpg",
   },
 ];
@@ -44,7 +54,7 @@ function FaqItem({ faq, index, isOpen, onToggle, onEnter, onLeave }) {
   return (
     <div
       className={`group relative border-b transition-colors duration-300 ${
-        isOpen ? "border-hoser-gold/40" : "border-white/10"
+        isOpen ? "border-hoser-gold/40" : "border-[#08111F]/10"
       }`}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
@@ -64,7 +74,7 @@ function FaqItem({ faq, index, isOpen, onToggle, onEnter, onLeave }) {
         {/* Ghost number */}
         <span
           className={`shrink-0 font-heading font-bold leading-none transition-colors duration-300 ${
-            isOpen ? "text-hoser-gold/40" : "text-white/8 group-hover:text-white/15"
+            isOpen ? "text-hoser-gold/40" : "text-[#08111F]/8 group-hover:text-[#08111F]/15"
           }`}
           style={{ fontSize: "clamp(1.8rem, 2.8vw, 2.8rem)", lineHeight: 1 }}
         >
@@ -74,7 +84,7 @@ function FaqItem({ faq, index, isOpen, onToggle, onEnter, onLeave }) {
         {/* Question */}
         <span
           className={`flex-1 font-heading text-base font-bold leading-snug tracking-tight transition-colors duration-300 md:text-lg lg:text-xl ${
-            isOpen ? "text-white" : "text-white/65 group-hover:text-white"
+            isOpen ? "text-[#08111F]" : "text-[#08111F]/65 group-hover:text-[#08111F]"
           }`}
         >
           {faq.q}
@@ -83,7 +93,7 @@ function FaqItem({ faq, index, isOpen, onToggle, onEnter, onLeave }) {
         {/* Toggle */}
         <span
           className={`mt-1 shrink-0 font-light leading-none transition-all duration-300 ${
-            isOpen ? "rotate-45 text-hoser-gold" : "text-white/35 group-hover:text-hoser-gold"
+            isOpen ? "rotate-45 text-hoser-gold" : "text-[#08111F]/35 group-hover:text-hoser-gold"
           }`}
           style={{ fontSize: "1.5rem" }}
         >
@@ -101,7 +111,7 @@ function FaqItem({ faq, index, isOpen, onToggle, onEnter, onLeave }) {
             transition={{ duration: 0.45, ease: EASE }}
             style={{ overflow: "hidden" }}
           >
-            <p className="pb-7 pl-[calc(clamp(1.8rem,2.8vw,2.8rem)+1.5rem)] font-body text-sm leading-relaxed text-white/55 md:text-base">
+            <p className="pb-7 pl-[calc(clamp(1.8rem,2.8vw,2.8rem)+1.5rem)] font-body text-sm leading-relaxed text-[#08111F]/55 md:text-base">
               {faq.a}
             </p>
           </motion.div>
@@ -114,48 +124,56 @@ function FaqItem({ faq, index, isOpen, onToggle, onEnter, onLeave }) {
 export function Faq14() {
   const [openIdx, setOpenIdx] = useState(null);
   const [hoverIdx, setHoverIdx] = useState(null);
+  const [slideIdx, setSlideIdx] = useState(0);
 
   const toggle = (i) => setOpenIdx((prev) => (prev === i ? null : i));
   const activeIdx = hoverIdx ?? openIdx ?? 0;
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideIdx((prev) => (prev + 1) % slideshowImages.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #040D1C 0%, #071428 60%, #050F22 100%)" }}
+      style={{ background: "#FFFFFF" }}
     >
       <div className="grid lg:grid-cols-[1fr_1.15fr]">
 
         {/* ── Left: Sticky image panel ── */}
         <div className="relative hidden overflow-hidden lg:sticky lg:top-0 lg:block lg:h-screen">
 
-          {/* All images stacked, crossfade via opacity */}
-          {faqs.map((faq, i) => (
+          {/* Slideshow: alle Bilder aus dem Bilder-Ordner */}
+          {slideshowImages.map((src, i) => (
             <motion.div
               key={i}
               className="absolute inset-0"
-              animate={{ opacity: activeIdx === i ? 1 : 0 }}
-              transition={{ duration: 0.65, ease: EASE }}
+              animate={{ opacity: slideIdx === i ? 1 : 0 }}
+              transition={{ duration: 1.0, ease: EASE }}
             >
               <motion.img
-                src={faq.image}
-                alt={faq.q}
+                src={src}
+                alt=""
                 className="absolute inset-0 h-full w-full object-cover"
-                animate={{ scale: activeIdx === i ? 1.04 : 1 }}
-                transition={{ duration: 6, ease: "easeOut" }}
+                animate={{ scale: slideIdx === i ? 1.05 : 1 }}
+                transition={{ duration: 4, ease: "easeOut" }}
               />
             </motion.div>
           ))}
 
           {/* Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040D1C]/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#040D1C]/85 via-transparent to-[#040D1C]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-transparent to-white/30" />
 
           {/* Subtle grid */}
           <div
             className="pointer-events-none absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
+                "linear-gradient(rgba(8,17,31,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(8,17,31,0.05) 1px, transparent 1px)",
               backgroundSize: "80px 80px",
             }}
           />
@@ -164,7 +182,7 @@ export function Faq14() {
           <div className="absolute inset-0 flex flex-col justify-between p-12">
             {/* Top */}
             <p className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-hoser-gold/80">
-              Hoser Bauunternehmung
+              Projektbau-Erding
             </p>
 
             {/* Bottom */}
@@ -173,13 +191,13 @@ export function Faq14() {
                 FAQ
               </p>
               <h2
-                className="font-heading font-bold leading-[1.05] tracking-tight text-white"
+                className="font-heading font-bold leading-[1.05] tracking-tight text-[#08111F]"
                 style={{ fontSize: "clamp(2.6rem, 4vw, 4.8rem)" }}
               >
                 Häufige<br />Fragen
               </h2>
               <div className="mt-6 h-px w-10 bg-hoser-gold/50" />
-              <p className="mt-5 font-body text-sm leading-relaxed text-white/45">
+              <p className="mt-5 font-body text-sm leading-relaxed text-[#08111F]/45">
                 Antworten auf das, was beim<br />Bauen in Bayern am meisten zählt.
               </p>
 
@@ -190,11 +208,11 @@ export function Faq14() {
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="font-heading text-2xl font-bold tabular-nums text-white"
+                  className="font-heading text-2xl font-bold tabular-nums text-[#08111F]"
                 >
                   {String(activeIdx + 1).padStart(2, "0")}
                 </motion.span>
-                <span className="font-body text-sm text-white/30">/ {String(faqs.length).padStart(2, "0")}</span>
+                <span className="font-body text-sm text-[#08111F]/30">/ {String(faqs.length).padStart(2, "0")}</span>
               </div>
             </div>
           </div>
@@ -205,7 +223,7 @@ export function Faq14() {
           className="px-[5%] py-16 md:py-24 lg:px-14 lg:py-28"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)",
+              "linear-gradient(rgba(8,17,31,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(8,17,31,0.05) 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         >
@@ -215,7 +233,7 @@ export function Faq14() {
               FAQ
             </p>
             <h2
-              className="mb-5 font-heading font-bold leading-[1.05] tracking-tight text-white"
+              className="mb-5 font-heading font-bold leading-[1.05] tracking-tight text-[#08111F]"
               style={{ fontSize: "clamp(2.4rem, 8vw, 4rem)" }}
             >
               Häufige<br />Fragen
@@ -240,12 +258,12 @@ export function Faq14() {
 
           {/* CTA */}
           <div className="mt-14">
-            <p className="mb-5 font-body text-sm text-white/40">
+            <p className="mb-5 font-body text-sm text-[#08111F]/40">
               Noch weitere Fragen?
             </p>
             <a
               href="/kontakt"
-              className="inline-flex items-center gap-3 border border-white/20 px-7 py-3.5 font-body text-sm font-semibold tracking-wide text-white/70 transition-all duration-200 hover:border-hoser-gold hover:text-hoser-gold"
+              className="inline-flex items-center gap-3 border border-[#08111F]/20 px-7 py-3.5 font-body text-sm font-semibold tracking-wide text-[#08111F]/70 transition-all duration-200 hover:border-hoser-gold hover:text-hoser-gold"
             >
               Fragen Sie uns
               <span>→</span>

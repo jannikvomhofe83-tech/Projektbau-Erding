@@ -13,20 +13,19 @@ export function Header69() {
           className="mb-5 font-heading font-bold leading-[1.05] tracking-tight text-white"
           style={{ fontSize: "clamp(2.8rem, 6vw, 6rem)" }}
         >
-          Drei Generationen.<br />Ein Name.
+          Ihr Traum.<br />Unser Handwerk.
         </h1>
         <p className="font-body text-base leading-relaxed text-white/65 md:text-lg">
-          Seit 1952 bauen wir im Raum Ebersberg, Erding und München-Ost.
-          Was als kleine Maurerfirma begann, ist heute ein leistungsstarkes
-          Bauunternehmen – mit eigenem Fachpersonal, moderner Technik und
-          dem Anspruch, Qualität zu liefern, die Generationen überdauert.
+          Fachbetrieb für Trockenbau und Altbausanierung in Erding.
+          Mustafa und sein Team stehen für zuverlässige, fachgerechte Arbeit –
+          ehrlich, sauber und flexibel für jeden Auftrag.
         </p>
       </div>
       <div className="absolute inset-0 z-0">
         <img
           src="/images/villa-twilight.jpg"
           className="size-full object-cover"
-          alt="Hoser Bauunternehmung"
+          alt="Projektbau-Erding"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-black/20" />
       </div>

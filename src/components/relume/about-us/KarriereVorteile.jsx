@@ -34,21 +34,16 @@ const vorteile = [
   },
   {
     num: "03",
-    title: "Eigene Ausbildung",
-    desc: "Wir bilden selbst aus und fördern gezielt – vom Lehrling über den Facharbeiter bis zum Polier und Meister.",
+    title: "Familiäres Team",
+    desc: "20+ Jahre Erfahrung. Flache Hierarchien, direkte Kommunikation mit Mustafa persönlich, Respekt und Zusammenhalt.",
   },
   {
     num: "04",
-    title: "Familiäres Team",
-    desc: "70 Jahre Familienunternehmen. Flache Hierarchien, direkte Kommunikation, Respekt und Zusammenhalt.",
+    title: "Sicherer Arbeitsplatz",
+    desc: "Konstante Auftragslage durch starkes regionales Netzwerk – über 500 abgeschlossene Projekte seit Jahren.",
   },
   {
     num: "05",
-    title: "Sicherer Arbeitsplatz",
-    desc: "Konstante Auftragslage durch starkes regionales Netzwerk – über 500 abgeschlossene Projekte seit 1952.",
-  },
-  {
-    num: "06",
     title: "Weiterbildung & Entwicklung",
     desc: "Interne und externe Schulungen für alle Mitarbeiter. Wir investieren in deine fachliche Weiterentwicklung.",
   },
@@ -60,7 +55,6 @@ export function KarriereVorteile() {
   const headingRef = useRef(null);
   const subRef     = useRef(null);
   const ctaRef     = useRef(null);
-  const ghostRef   = useRef(null);
   const cellsRef   = useRef([]);
 
   useEffect(() => {
@@ -87,21 +81,7 @@ export function KarriereVorteile() {
         .to(subRef.current, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, "-=0.5")
         .to(ctaRef.current, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, "-=0.4");
 
-      // Ghost "HOSER" parallax
-      if (ghostRef.current) {
-        gsap.to(ghostRef.current, {
-          x: -120,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      }
-
-      // Per-cell entrance: gold number scale + content lift + bottom line wipe
+// Per-cell entrance: gold number scale + content lift + bottom line wipe
       cellsRef.current.filter(Boolean).forEach((cell, idx) => {
         const num   = cell.querySelector("[data-vt-num]");
         const title = cell.querySelector("[data-vt-title]");
@@ -139,13 +119,13 @@ export function KarriereVorteile() {
       ref={sectionRef}
       id="jobs"
       className="overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #0d1a2e 0%, #111827 60%, #0a1020 100%)" }}
+      style={{ background: "#FFFFFF" }}
     >
       {/* Top: image background behind heading */}
       <div
         className="relative px-[5%] py-16 md:py-24 lg:py-28"
         style={{
-          backgroundImage: "url('/images/bild14.jpg')",
+          backgroundImage: "url('/images/bild10.png')",
           backgroundSize: "cover",
           backgroundPosition: "center 30%",
         }}
@@ -154,39 +134,25 @@ export function KarriereVorteile() {
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to bottom, rgba(10,16,32,0.55) 0%, rgba(10,16,32,0.30) 40%, rgba(13,21,32,0.70) 75%, rgba(13,21,32,1) 100%)",
+            background: "linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.78) 40%, rgba(255,255,255,0.92) 75%, rgba(255,255,255,1) 100%)",
           }}
         />
 
-        {/* Decorative background text */}
-        <div
-          ref={ghostRef}
-          className="pointer-events-none absolute right-[-2%] top-[50%] -translate-y-1/2 select-none font-heading font-bold leading-none text-white/[0.06]"
-          style={{ fontSize: "clamp(6rem, 18vw, 20rem)" }}
-          aria-hidden="true"
-        >
-          HOSER
-        </div>
-
-        <div className="container relative z-10">
+<div className="container relative z-10">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-end">
             <div>
               <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A84C]">
-                Karriere bei Hoser
+                Karriere bei Projektbau-Erding
               </p>
               <h2
                 ref={headingRef}
-                className="font-heading font-bold leading-tight tracking-tight text-white"
+                className="font-heading font-bold leading-tight tracking-tight text-[#08111F]"
                 style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
               >
                 Warum bei uns arbeiten?
               </h2>
             </div>
             <div className="md:text-right">
-              <p ref={subRef} className="font-body text-base leading-relaxed text-white/70 max-w-md md:ml-auto">
-                Als gewachsenes Familienunternehmen bieten wir mehr als nur einen Job –
-                einen Arbeitsplatz, der sich lohnt. Langfristig, sicher und fair.
-              </p>
               <a
                 ref={ctaRef}
                 href="#stellenangebote"
@@ -202,20 +168,20 @@ export function KarriereVorteile() {
       {/* Benefits grid */}
       <div className="px-[5%] pb-16 md:pb-24 lg:pb-28">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#08111F]/[0.08]">
             {vorteile.map((v, idx) => (
               <div
                 key={v.num}
                 ref={(el) => (cellsRef.current[idx] = el)}
-                className="group relative bg-[#0d1520] p-8 md:p-10 transition-colors duration-300 hover:bg-white/[0.04]"
+                className="group relative bg-[#F4F7FA] p-8 md:p-10 transition-colors duration-300 hover:bg-[#EDF0F4]"
               >
                 <span data-vt-num className="mb-6 block font-body text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C9A84C]/60">
                   {v.num}
                 </span>
-                <h3 data-vt-title className="mb-3 font-heading text-lg font-bold text-white md:text-xl transition-colors duration-300 group-hover:text-[#C9A84C]">
+                <h3 data-vt-title className="mb-3 font-heading text-lg font-bold text-[#08111F] md:text-xl transition-colors duration-300 group-hover:text-[#C9A84C]">
                   {v.title}
                 </h3>
-                <p data-vt-desc className="font-body text-sm leading-relaxed text-white/45">
+                <p data-vt-desc className="font-body text-sm leading-relaxed text-[#08111F]/45">
                   {v.desc}
                 </p>
                 <div data-vt-line className="absolute bottom-0 left-0 h-[2px] w-full bg-[#C9A84C]/30" />

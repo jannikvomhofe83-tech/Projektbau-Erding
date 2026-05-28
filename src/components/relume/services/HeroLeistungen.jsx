@@ -60,89 +60,22 @@ export function HeroLeistungen() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Image: slow Ken-Burns + initial reveal
       gsap.set(imageRef.current, { scale: 1.18, filter: "brightness(0.7)" });
-      gsap.set(overlayRef.current, { opacity: 1 });
-
-      // Side mark
-      gsap.set(sideMarkRef.current, { y: 30, opacity: 0 });
-
-      // Eyebrow
       gsap.set(eyebrowRef.current, { x: -30, opacity: 0 });
-
-      // Heading words
-      const headingWords = headingRef.current
-        ? splitWords(headingRef.current, "Leistungen mit System.")
-        : [];
-      gsap.set(headingWords, { yPercent: 110 });
-
-      // Sub paragraph
+      gsap.set(".leistungen-line-inner", { yPercent: 110 });
       gsap.set(subRef.current, { y: 24, opacity: 0 });
-
-      // Meta + CTA
-      gsap.set(metaRef.current?.children || [], { y: 18, opacity: 0 });
       gsap.set(ctaRef.current, { y: 18, opacity: 0 });
+      gsap.set(scrollRef.current, { opacity: 0 });
 
-      // Scroll cue
-      gsap.set(scrollRef.current, { y: 16, opacity: 0 });
+      gsap.timeline({ defaults: { force3D: true } })
+        .to(imageRef.current, { scale: 1.06, filter: "brightness(0.85)", duration: 1.6, ease: "power2.out" })
+        .to(eyebrowRef.current, { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, "-=1.2")
+        .to(".leistungen-line-inner", { yPercent: 0, duration: 1.0, ease: "expo.out", stagger: 0.15 }, "-=0.5")
+        .to(subRef.current, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, "-=0.4")
+        .to(ctaRef.current, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, "-=0.3")
+        .to(scrollRef.current, { opacity: 1, duration: 0.6, ease: "power2.out" }, "-=0.2");
 
-      const tl = gsap.timeline({ defaults: { force3D: true } });
-
-      tl.to(imageRef.current, {
-          scale: 1.06,
-          filter: "brightness(0.85)",
-          duration: 1.6,
-          ease: "power2.out",
-        })
-        .to(overlayRef.current, {
-          opacity: 0.55,
-          duration: 1.2,
-          ease: "power2.out",
-        }, "-=1.2")
-        .to(sideMarkRef.current, {
-          y: 0, opacity: 1, duration: 0.8, ease: "power3.out",
-        }, "-=1.0")
-        .to(eyebrowRef.current, {
-          x: 0, opacity: 1, duration: 0.7, ease: "power3.out",
-        }, "-=0.8")
-        .to(headingWords, {
-          yPercent: 0, duration: 1.0, ease: "expo.out", stagger: 0.08,
-        }, "-=0.5")
-        .to(subRef.current, {
-          y: 0, opacity: 1, duration: 0.7, ease: "power3.out",
-        }, "-=0.4")
-        .to(metaRef.current?.children || [], {
-          y: 0, opacity: 1, duration: 0.6, ease: "power3.out", stagger: 0.08,
-        }, "-=0.4")
-        .to(ctaRef.current, {
-          y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)",
-        }, "-=0.3")
-        .to(scrollRef.current, {
-          y: 0, opacity: 1, duration: 0.6, ease: "power2.out",
-        }, "-=0.2");
-
-      // Slow continuous Ken-Burns drift
-      gsap.to(imageRef.current, {
-        scale: 1.1,
-        duration: 14,
-        ease: "sine.inOut",
-        yoyo: true,
-        repeat: -1,
-      });
-
-      // Animated scroll indicator dot
-      if (scrollRef.current) {
-        const dot = scrollRef.current.querySelector("[data-scroll-dot]");
-        if (dot) {
-          gsap.to(dot, {
-            y: 18,
-            duration: 1.4,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1,
-          });
-        }
-      }
+      gsap.to(imageRef.current, { scale: 1.1, duration: 14, ease: "sine.inOut", yoyo: true, repeat: -1 });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -157,115 +90,107 @@ export function HeroLeistungen() {
       {/* Background image */}
       <img
         ref={imageRef}
-        src="/images/leistungen-hero.jpg"
-        alt="Hoser Bauunternehmung – Leistungen"
+        src="/images/bild9.png"
+        alt="Projektbau-Erding – Leistungen"
         className="absolute inset-0 h-full w-full object-cover"
         style={{ willChange: "transform, filter" }}
       />
 
-      {/* Layered overlays */}
+      {/* Overlay — dark on right, fades left (mirrored Prozess hero) */}
       <div
         ref={overlayRef}
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(10,16,32,0.55) 0%, rgba(10,16,32,0.35) 35%, rgba(10,16,32,0.85) 100%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.10) 0%, transparent 55%)",
+            "linear-gradient(to left, rgba(4,10,22,0.96) 0%, rgba(4,10,22,0.82) 40%, rgba(4,10,22,0.3) 75%, rgba(4,10,22,0.05) 100%)",
         }}
       />
 
-      {/* Decorative grid lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.07]"
-           style={{
-             backgroundImage:
-               "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
-             backgroundSize: "120px 120px",
-           }}
-      />
-
-      {/* Vertical side mark removed — collided with the oversized heading. */}
-
-      {/* Top-right meta strip */}
-      <div className="absolute top-24 right-[5%] hidden lg:flex items-center gap-3 font-body text-[11px] uppercase tracking-[0.3em] text-white/60">
-        <span className="h-px w-10 bg-hoser-gold/70" />
-        <span>Bauunternehmung</span>
-      </div>
-
-      {/* Main content */}
-      <div className="relative z-10 h-full flex flex-col justify-end px-[5%] pb-20 md:pb-28">
-        <div className="max-w-[1400px]">
-          <p
-            ref={eyebrowRef}
-            className="mb-6 font-body text-sm font-semibold uppercase tracking-[0.4em] text-hoser-gold flex items-center gap-4"
-          >
-            <span className="h-px w-12 bg-hoser-gold" />
-            Leistungen
-          </p>
+      {/* Main content — right side */}
+      <div className="relative z-10 h-full flex items-center justify-end px-[4%] pt-24 pb-36 md:pt-28 lg:pt-32 lg:pb-48">
+        <div className="md:max-w-[50%] lg:max-w-[45%]">
+          <div className="mb-10 flex items-center gap-4">
+            <span className="h-px w-10 flex-shrink-0 bg-hoser-gold" />
+            <div style={{ overflow: "hidden" }}>
+              <p
+                ref={eyebrowRef}
+                className="font-body text-xs font-semibold uppercase tracking-[0.25em] text-white/50"
+              >
+                Unsere Leistungen · Fachbetrieb für Innenausbau
+              </p>
+            </div>
+          </div>
 
           <h1
             ref={headingRef}
-            className="font-heading font-bold leading-[0.95] tracking-tight text-white"
-            style={{ fontSize: "clamp(3rem, 9vw, 9rem)" }}
+            className="mb-10 font-heading font-bold tracking-tight text-white"
+            style={{ fontSize: "clamp(2.8rem, 5.5vw, 6rem)", lineHeight: 1.04 }}
           >
-            Leistungen mit System.
+            {["Ihr Traum,", "unser Handwerk."].map((line, i) => (
+              <span key={i} className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
+                <span className="leistungen-line-inner block">{line}</span>
+              </span>
+            ))}
           </h1>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-x-12 items-end">
-            <p
-              ref={subRef}
-              className="md:col-span-6 lg:col-span-5 font-body text-base md:text-lg leading-relaxed text-white/75 max-w-xl"
-            >
-              Fünf Gewerke. Ein Ansprechpartner. Vom ersten Spatenstich bis zur
-              schlüsselfertigen Übergabe – wir verbinden traditionelles Handwerk
-              mit modernster Bautechnik.
-            </p>
+          <p
+            ref={subRef}
+            className="max-w-[400px] font-body text-base leading-relaxed text-white/55 md:text-lg"
+          >
+            Trockenbau, Altbausanierung, Malerarbeiten und mehr –
+            fachgerecht, ehrlich und sauber ausgeführt.
+          </p>
 
-            <div
-              ref={metaRef}
-              className="md:col-span-3 lg:col-span-3 flex md:flex-col gap-8 md:gap-2"
-            >
-              <div>
-                <span className="block font-body text-[11px] uppercase tracking-[0.25em] text-hoser-gold mb-1">
-                  Standort
-                </span>
-                <span className="font-heading text-lg font-semibold text-white">
-                  Wasserburg am Inn
-                </span>
-              </div>
-            </div>
-
-            <div className="md:col-span-3 lg:col-span-4 flex md:justify-end">
-              <a
-                ref={ctaRef}
-                href="#leistungen"
-                className="group inline-flex items-center gap-3 border border-hoser-gold/70 bg-hoser-gold/0 hover:bg-hoser-gold px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.15em] text-hoser-gold hover:text-[#0a1020] transition-all duration-300"
+          <a
+            ref={ctaRef}
+            href="#leistungen"
+            className="group mt-10 flex items-center gap-5 w-fit"
+          >
+            <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-white/15 transition-colors duration-500 group-hover:border-hoser-gold">
+              <span
+                className="absolute inset-0 rounded-full border border-hoser-gold opacity-0 scale-125 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100"
+                aria-hidden="true"
+              />
+              <svg
+                className="h-4 w-4 text-white/80 transition-all duration-500 group-hover:text-hoser-gold group-hover:translate-y-0.5"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
               >
-                <span>Gewerke entdecken</span>
-                <span className="text-base transition-transform duration-300 group-hover:translate-x-1">
-                  ↓
-                </span>
-              </a>
-            </div>
-          </div>
+                <path
+                  d="M8 2 v12 M3 9 l5 5 l5 -5"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <span className="text-left">
+              <span className="block font-body text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-hoser-gold">
+                Leistungen entdecken
+              </span>
+              <span className="mt-1 block font-body text-[0.65rem] uppercase tracking-[0.22em] text-white/40">
+                Trockenbau · Sanierung · Ausbau
+              </span>
+            </span>
+          </a>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div
-        ref={scrollRef}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
-      >
-        <span className="font-body text-[10px] uppercase tracking-[0.4em] text-white/50">
-          Scroll
-        </span>
-        <div className="relative h-12 w-px bg-white/15 overflow-hidden">
-          <span data-scroll-dot className="absolute top-0 left-1/2 -translate-x-1/2 h-3 w-px bg-hoser-gold" />
+      {/* Bottom-right: scroll indicator */}
+      <div className="absolute bottom-12 right-[6%] z-10 hidden lg:block">
+        <div className="flex items-center gap-5">
+          <span
+            ref={scrollRef}
+            className="block font-body text-[0.6rem] uppercase tracking-[0.4em] text-white/30"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+          >
+            Scrollen
+          </span>
+          <span className="relative mt-4 block h-16 w-px bg-white/15 overflow-hidden">
+            <span data-scroll-dot className="absolute left-0 top-0 block w-px h-4 bg-hoser-gold" />
+          </span>
         </div>
       </div>
     </section>

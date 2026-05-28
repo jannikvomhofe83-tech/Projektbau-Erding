@@ -4,20 +4,10 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const team = [
-  { name: "Claudia Hoser",      role: "Geschäftsführerin",          img: "/images/team/ceo_woman.jpg" },
-  { name: "Josef Lippacher",    role: "Geschäftsführer",            img: "/images/team/ceo_man.jpg" },
-  { name: "Martin Bauer",       role: "Bauleiter",                  img: "/images/team/site_manager.jpg" },
-  { name: "Stefan Huber",       role: "Polier",                     img: "/images/team/polier.jpg" },
-  { name: "Andreas Maier",      role: "Polier",                     img: "/images/team/site_manager.jpg" },
-  { name: "Thomas Schneider",   role: "Maurermeister",              img: "/images/team/mason.jpg" },
-  { name: "Michael Wagner",     role: "Beton- & Stahlbetonbauer",   img: "/images/team/concrete.jpg" },
-  { name: "Klaus Fischer",      role: "Kanalbauer",                 img: "/images/team/kanal.jpg" },
-  { name: "Sebastian Müller",   role: "Kranführer",                 img: "/images/team/crane_op.jpg" },
-  { name: "Florian Zimmermann", role: "Baggerfahrer",               img: "/images/team/excavator.jpg" },
-  { name: "Peter Hofmann",      role: "Schalungszimmerer",          img: "/images/team/concrete.jpg" },
-  { name: "Hans Berger",        role: "Maschinenführer",            img: "/images/team/excavator.jpg" },
-  { name: "Eva Keller",         role: "Buchhaltung",                img: "/images/team/office_woman1.jpg" },
-  { name: "Sandra Richter",     role: "Projektassistenz",           img: "/images/team/office_woman2.jpg" },
+  { name: "Mustafa",             role: "Inhaber & Geschäftsführer",  img: "/images/team/ceo_man.jpg" },
+  { name: "Das Team",           role: "Trockenbau & Innenausbau",   img: "/images/team/site_manager.jpg" },
+  { name: "Fachkräfte",         role: "Altbausanierung",            img: "/images/team/mason.jpg" },
+  { name: "Profis",             role: "Malerarbeiten",              img: "/images/team/concrete.jpg" },
   { name: "Christian Wolf",     role: "Azubi – Maurer",             img: "/images/team/apprentice.jpg" },
 ];
 
@@ -104,7 +94,7 @@ export function Team() {
         {/* Heading */}
         <div className="mb-14 md:mb-18">
           <p ref={eyebrowRef} className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A84C]">
-            Menschen bei Hoser
+            Menschen bei Projektbau-Erding
           </p>
           <h2
             ref={headingRef}

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion, LayoutGroup } from "framer-motion";
 
-const TEXT = "Hoser Bauunternehmung";
+const TEXT = "Projektbau-Erding";
 const CHARS = TEXT.split("");
 
 const FONT = {

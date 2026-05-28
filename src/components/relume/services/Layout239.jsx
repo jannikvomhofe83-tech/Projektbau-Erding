@@ -5,39 +5,46 @@ import { gsap, ScrollTrigger } from "../../../utils/gsap";
 
 const services = [
   {
-    image: "/images/munich-residential.jpg",
+    image: "/images/bild10.png",
     num: "01",
-    title: "Hochbau & Neubau",
-    body: "Neubau von Wohnanlagen, Mehrfamilienhäusern, Einfamilienhäusern und öffentlichen Gebäuden.",
-    tags: ["Wohnbau", "Mehrfamilienhäuser", "Öffentliche Bauten"],
+    title: "Trockenbau",
+    body: "Professioneller Trockenbau für Wohn- und Gewerberäume – Trennwände, Decken, Verkleidungen und mehr.",
+    tags: ["Trennwände", "Unterdecken", "Schachtkonstruktionen"],
   },
   {
-    image: "/images/craftsmen-stone-facade.jpg",
+    image: "/images/bild11.png",
     num: "02",
-    title: "Sanierung & Umbau",
-    body: "Modernisierung und Erweiterung von Bestandsgebäuden – auch denkmalgeschützte Bauwerke.",
-    tags: ["Denkmalschutz", "Modernisierung", "Kirchensanierung"],
-  },
-  {
-    image: "/images/team-blueprints.jpg",
-    num: "03",
-    title: "Erd- & Kanalbau",
-    body: "Tiefbauarbeiten, Erschließungen, Kanal- und Wasserleitungsarbeiten für Kommunen und Private.",
-    tags: ["Erschließung", "Kanalbau", "Kommunalaufträge"],
-  },
-  {
-    image: "/images/villa-twilight.jpg",
-    num: "04",
-    title: "Ingenieurbau",
-    body: "Konstruktiver Bau mit höchsten technischen Anforderungen: Sichtbeton, Hochbehälter, Stützkonstruktionen.",
-    tags: ["Sichtbeton", "Hochbehälter", "Spezialtiefbau"],
+    title: "Altbausanierung",
+    body: "Fachgerechte Sanierung von Altbauten – von der energetischen Modernisierung bis zur Komplettsanierung.",
+    tags: ["Energetische Sanierung", "Modernisierung", "Bestandsgebäude"],
   },
   {
     image: "/images/interior-oak-concrete.jpg",
+    num: "03",
+    title: "Innenausbau",
+    body: "Kompletter Innenausbau nach Ihren Wünschen – vom Rohbau bis zur schlüsselfertigen Übergabe.",
+    tags: ["Bodenbeläge", "Türen & Fenster", "Schlüsselfertig"],
+  },
+  {
+    image: "/images/bild12.png",
+    num: "04",
+    title: "Malerarbeiten",
+    body: "Hochwertige Malerarbeiten innen und außen – sauber, präzise und termingerecht ausgeführt.",
+    tags: ["Innenanstrich", "Außenanstrich", "Tapezieren"],
+  },
+  {
+    image: "/images/villa-twilight.jpg",
     num: "05",
-    title: "Industrie- & Gewerbebau",
-    body: "Produktionshallen, Bürogebäude und gewerbliche Anlagen – maßgeschneidert für Ihren Betrieb.",
-    tags: ["Produktionshallen", "Bürogebäude", "Betriebsstätten"],
+    title: "Fassadenrenovierung",
+    body: "Fassadensanierung und -renovierung für ein frisches Erscheinungsbild und besseren Wärmeschutz.",
+    tags: ["WDVS", "Putzarbeiten", "Wetterschutz"],
+  },
+  {
+    image: "/images/bild14.png",
+    num: "06",
+    title: "Dachgeschossausbau",
+    body: "Ausbau und Renovierung von Dachgeschossen – vom Trockenbau bis zur vollständigen Raumgestaltung.",
+    tags: ["Dachausbau", "Wohnraumgewinnung", "Dämmung"],
   },
 ];
 
@@ -231,7 +238,7 @@ export function Layout239() {
             className="font-heading font-bold leading-tight tracking-tight text-[#0a1020] whitespace-nowrap"
             style={{ fontSize: "clamp(2rem, 4vw, 4rem)", willChange: "transform, opacity" }}
           >
-            Fünf Gewerke. Ein Ansprechpartner.
+            Sechs Leistungen. Ein Ansprechpartner.
           </h2>
         </div>
 
@@ -329,7 +336,7 @@ export function Layout239() {
           </a>
           <a
             href="/projekte"
-            className="inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white/50 transition-colors duration-200 hover:text-hoser-gold"
+            className="inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#08111F]/55 transition-colors duration-200 hover:text-hoser-gold"
           >
             Referenzprojekte ansehen
             <span className="text-hoser-gold">→</span>

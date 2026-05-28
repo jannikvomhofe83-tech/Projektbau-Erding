@@ -177,7 +177,7 @@ export function VideoSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-text-primary"
+      className="relative bg-white"
       style={{ height: "280vh" }}
     >
       <div className="sticky top-0 h-screen overflow-hidden">

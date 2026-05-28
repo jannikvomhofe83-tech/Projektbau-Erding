@@ -4,10 +4,10 @@ import { useRef, useEffect } from "react";
 import { gsap } from "../../../utils/gsap";
 
 const stats = [
-  { value: "547", label: "Abgeschlossene Projekte", num: 547, suffix: "" },
-  { value: "98%", label: "Pünktliche Fertigstellung", num: 98,  suffix: "%" },
-  { value: "96%", label: "Im Budgetrahmen",           num: 96,  suffix: "%" },
-  { value: "70+", label: "Jahre in Bayern",           num: 70,  suffix: "+" },
+  { value: "5012", label: "Bewertungen auf My-Hammer", num: 5012, suffix: "" },
+  { value: "5/5", label: "Google-Bewertung",           num: 5,   suffix: "/5" },
+  { value: "12",  label: "Google Rezensionen",         num: 12,  suffix: "" },
+  { value: "24/7", label: "Erreichbar für Sie",        num: 24,  suffix: "/7" },
 ];
 
 export function Stats17() {
@@ -94,18 +94,18 @@ export function Stats17() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-text-primary"
+      className="relative overflow-hidden bg-[#FFFFFF]"
       style={{ height: "100vh" }}
     >
       {/* Background image — clip-path animated wrapper */}
       <div className="s17-bg-clip absolute inset-0 z-0">
         <img
-          src="/images/villa-twilight.jpg"
-          alt="Bayerische Villa im Abendlicht"
+          src="/images/bild7.png"
+          alt="Renovierter Innenraum"
           className="s17-bg-img absolute inset-0 size-full object-cover"
           style={{ willChange: "transform" }}
         />
-        <div className="s17-overlay absolute inset-0 bg-text-primary" />
+        <div className="s17-overlay absolute inset-0 bg-[#FFFFFF]" />
       </div>
 
       {/* Content — hidden until image fills the section */}
@@ -121,7 +121,7 @@ export function Stats17() {
               Ergebnisse,<br />die für sich sprechen
             </h2>
             <p className="font-body text-base text-text-alternative/75 md:text-lg">
-              Über 70 Jahre Bauen in Bayern. Hunderte von Gebäuden. Ein Ruf.
+              Über 20 Jahre Erfahrung. Über 5.000 zufriedene Kunden. Ein Ruf.
             </p>
             <div className="mt-8">
               <a

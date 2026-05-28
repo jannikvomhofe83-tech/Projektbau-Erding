@@ -34,15 +34,15 @@ export function Contact6() {
           <div className="grid grid-cols-1 gap-4 py-2">
             <div className="flex items-center gap-4">
               <BiEnvelope className="size-6 flex-none" />
-              <p>info@hoser-bauunternehmung.de</p>
+              <p>info@projektbau-erding.de</p>
             </div>
             <div className="flex items-center gap-4">
               <BiPhone className="size-6 flex-none" />
-              <p>08121 – 47 11 0</p>
+              <p>0176 83039047</p>
             </div>
             <div className="flex items-center gap-4">
               <BiMap className="size-6 flex-none" />
-              <p>Adalbert-Stifter-Weg 29, 85570 Markt Schwaben</p>
+              <p>Erding, Bayern</p>
             </div>
           </div>
         </div>

@@ -12,17 +12,17 @@ export function Layout10() {
               Unsere Geschichte
             </p>
             <h2 className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-text-primary md:text-5xl lg:text-6xl">
-              Vom Maurerbetrieb zum Vollbauunternehmen
+              Fachbetrieb für Trockenbau & Altbausanierung
             </h2>
             <p className="mb-6 font-body text-base leading-relaxed text-text-secondary md:text-lg">
-              Michael Hoser gründete das Unternehmen 1952 als Maurerfirma mit drei Mitarbeitern in Markt Schwaben.
-              Unter seinen Söhnen Dieter und Manfred Hoser wuchs es zu einem Bauunternehmen mit 30 Mitarbeitern heran.
-              Heute liegt die Geschäftsführung in den Händen von <strong className="text-text-primary font-semibold">Claudia Hoser</strong> und <strong className="text-text-primary font-semibold">Josef Lippacher</strong> – bereits die dritte Generation.
+              Mustafa gründete Projektbau-Erding mit einer klaren Vision: zuverlässige, fachgerechte
+              Arbeit in Trockenbau und Altbausanierung – für jeden Kunden, bei jedem Auftrag.
+              Ob kleine Reparatur oder große Sanierung, er ist flexibel und persönlich dabei.
             </p>
             <p className="mb-8 font-body text-base leading-relaxed text-text-secondary md:text-lg">
-              Unser Aufgabenschwerpunkt liegt in der Ausführung von Baumeisterarbeiten im Hoch-, Erd- und Kanalbau.
-              Wir erstellen und sanieren sämtliche Wohn-, Gewerbe- und Ingenieurbauwerke – auch mit höchstem Schwierigkeitsgrad.
-              Durch eigene Fachkräfte und konsequente Lehrlingsausbildung sichern wir gleichbleibend hohe Qualität.
+              Unser Leistungsspektrum umfasst Trockenbau, Innenausbau, Malerarbeiten,
+              Fassadenrenovierung und Dachgeschossausbau.
+              Ehrlichkeit, Sauberkeit und fachgerechte Ausführung sind unsere Grundwerte.
             </p>
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               <div className="border-l-2 border-hoser-gold pl-5">
@@ -62,7 +62,7 @@ export function Layout10() {
             <img
               src="/images/craftsmen-stone-facade.jpg"
               className="w-full object-cover transition-transform duration-700 hover:scale-105"
-              alt="Hoser Bauunternehmung – Facharbeiter auf der Baustelle"
+              alt="Projektbau-Erding – Facharbeiter auf der Baustelle"
             />
           </div>
         </div>

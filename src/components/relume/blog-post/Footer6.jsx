@@ -116,13 +116,24 @@ export function Footer6() {
           ))}
         </div>
 
+        {/* Rechtlicher Hinweis Meisterpflicht */}
+        <div className="mb-8 border border-border-alternative/40 bg-white/[0.03] px-6 py-5 rounded-sm">
+          <p className="mb-1 font-body text-[11px] font-semibold uppercase tracking-[0.2em] text-hoser-gold/70">
+            Rechtlicher Hinweis · Handwerksordnung (HwO)
+          </p>
+          <p className="font-body text-xs leading-relaxed text-text-alternative/45">
+            Projektbau-Erding führt alle Arbeiten, die als zulassungspflichtiges Handwerk gemäß Anlage A der Handwerksordnung (HwO) eingestuft sind – insbesondere Maler- und Lackierarbeiten – ausschließlich in Kooperation mit zugelassenen Meisterbetrieben aus.
+            Für diese Gewerke arbeiten wir fest mit <span className="text-text-alternative/65">Malerbetrieb Heiko Günther (Meisterbetrieb)</span> zusammen, der die gesetzlich vorgeschriebene Meisterqualifikation besitzt und die Verantwortung für die fachgerechte Ausführung trägt.
+          </p>
+        </div>
+
         {/* Bottom bar */}
         <div className="border-t border-border-alternative pt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
           <a href="/" className="font-heading text-base font-bold tracking-[0.12em] uppercase text-text-alternative">
-            Hoser Bau
+            Projektbau-Erding
           </a>
           <p className="font-body text-xs text-text-alternative/40">
-            © {new Date().getFullYear()} Hoser Bauunternehmen. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} Projektbau-Erding. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>

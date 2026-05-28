@@ -4,22 +4,22 @@ import React from "react";
 
 const testimonials = [
   {
-    quote: "Pünktlich fertig und unter Budget. Keine Ausreden, keine Verzögerungen.",
-    name: "Klaus Bergmann",
-    role: "Bauherr, München",
-    initials: "KB",
+    quote: "Dank Mustafa und seinem Team war die Sanierung unserer Wohnung im Olympiadorf in München eine super Erfahrung und für mich als Architektin eine tolle Zusammenarbeit.",
+    name: "F. B.",
+    role: "Architektin, München · Google ★★★★★",
+    initials: "FB",
   },
   {
-    quote: "Wir wussten vor dem Start genau, was es kosten würde. Diese Ehrlichkeit hat alles verändert.",
-    name: "Margarethe Hoffmann",
-    role: "Bauherrin, Augsburg",
-    initials: "MH",
+    quote: "Nach über zehn Jahren ohne Renovierung war die Zeit reif. Das Ergebnis hat alle Erwartungen übertroffen. Sehr empfehlenswert!",
+    name: "Marion Robisch",
+    role: "Kundin · Google ★★★★★",
+    initials: "MR",
   },
   {
-    quote: "Sie haben unsere Sanierung behandelt wie ihr eigenes Zuhause. Professionell, direkt, keine verschwendete Zeit.",
-    name: "Thomas Richter",
-    role: "Bauherr, Nürnberg",
-    initials: "TR",
+    quote: "Wir haben unser Dachgeschoss ausbauen lassen und wurden beim Trockenbau, Innenausbau und den Malerarbeiten hervorragend und freundlich begleitet.",
+    name: "Jones Bein",
+    role: "Kunde · Google ★★★★★",
+    initials: "JB",
   },
 ];
 

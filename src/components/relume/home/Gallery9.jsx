@@ -6,24 +6,21 @@ import { gsap } from "../../../utils/gsap";
 const projects = [
   {
     id: "01",
-    image: "/images/munich-residential.jpg",
-    title: "Wohnanlage München/Trudering",
-    category: "Wohnungsbau · 97 WE + Tiefgarage",
-    year: "2008",
+    image: "/images/hero-bild2.png",
+    title: "Wohnungssanierung Olympiadorf",
+    category: "Altbausanierung · München",
   },
   {
     id: "02",
-    image: "/images/villa-twilight.jpg",
-    title: "Wohnpark Haydn, Markt Schwaben",
-    category: "Wohnungsbau · 56 WE + Tiefgarage",
-    year: "2015",
+    image: "/images/bild8.png",
+    title: "Fassadenrenovierung Einfamilienhaus",
+    category: "Fassadenrenovierung · Erding / München",
   },
   {
     id: "03",
-    image: "/images/craftsmen-stone-facade.jpg",
-    title: "Firma Seidenader, Markt Schwaben",
-    category: "Industriebau · Produktionshalle + Büro",
-    year: "2007",
+    image: "/images/bild9.png",
+    title: "Dachgeschossausbau mit Innenausbau",
+    category: "Dachgeschossausbau · München",
   },
 ];
 
@@ -151,7 +148,7 @@ export function Gallery9() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-background-primary px-[5%] py-16 md:py-24 lg:py-28">
+    <section ref={sectionRef} className="bg-white px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
 
         {/* Heading */}
@@ -160,7 +157,7 @@ export function Gallery9() {
             Portfolio
           </p>
           <h2
-            className="font-heading font-bold leading-[1.05] tracking-tight text-text-primary"
+            className="font-heading font-bold leading-[1.05] tracking-tight text-[#08111F]"
             style={{ fontSize: "clamp(2.4rem, 4.5vw, 4.5rem)" }}
           >
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
@@ -168,7 +165,7 @@ export function Gallery9() {
             </span>
             <span className="block" style={{ overflow: "hidden", paddingBottom: "0.08em" }}>
               <span className="g9-heading-inner block">
-                <em className="font-serif font-light not-italic text-text-secondary">
+                <em className="font-serif font-light not-italic text-[#6B82A0]">
                   Projekte.
                 </em>
               </span>
@@ -212,7 +209,7 @@ export function Gallery9() {
                       {p.title}
                     </h3>
                     <p className="mt-1 font-body text-sm leading-relaxed text-white/70">
-                      {p.category} · {p.year}
+                      {p.category}
                     </p>
                   </div>
                 </div>
@@ -220,7 +217,7 @@ export function Gallery9() {
                 {/* Number panel */}
                 <div className="g9-num-panel flex items-center justify-center">
                   <span
-                    className="font-heading font-bold leading-none tracking-tight text-text-primary/10 select-none"
+                    className="font-heading font-bold leading-none tracking-tight text-[#08111F]/10 select-none"
                     style={{ fontSize: "clamp(8rem, 18vw, 18rem)" }}
                     aria-hidden="true"
                   >
@@ -242,7 +239,7 @@ export function Gallery9() {
           </a>
           <a
             href="/projekte"
-            className="g9-cta inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.1em] text-text-secondary transition-colors duration-200 hover:text-text-primary"
+            className="g9-cta inline-flex items-center gap-3 font-body text-sm font-semibold uppercase tracking-[0.1em] text-[#6B82A0] transition-colors duration-200 hover:text-[#08111F]"
           >
             Projektübersicht
             <span className="text-hoser-gold">→</span>

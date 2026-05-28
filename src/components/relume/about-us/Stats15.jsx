@@ -3,10 +3,10 @@
 import React from "react";
 
 const stats = [
-  { value: "1952", label: "Gründungsjahr" },
-  { value: "70+", label: "Jahre Erfahrung in Bayern" },
-  { value: "5", label: "Gewerke aus einer Hand" },
-  { value: "3.", label: "Generation Familienunternehmen" },
+  { value: "5012", label: "Bewertungen My-Hammer" },
+  { value: "5/5", label: "Google Sterne" },
+  { value: "24/7", label: "Erreichbar für Sie" },
+  { value: "100%", label: "Kostenloses Angebot" },
 ];
 
 export function Stats15() {
@@ -16,7 +16,7 @@ export function Stats15() {
         <img
           src="/images/munich-residential.jpg"
           className="size-full object-cover"
-          alt="Hoser Bauprojekt"
+          alt="Projektbau-Erding Projekt"
         />
         <div className="absolute inset-0 bg-text-primary/75" />
       </div>
@@ -27,11 +27,11 @@ export function Stats15() {
               Das Unternehmen in Zahlen
             </p>
             <h2 className="mb-5 font-heading text-4xl font-bold leading-tight tracking-tight text-white md:mb-6 md:text-5xl lg:text-6xl">
-              Markt Schwaben.<br />Seit drei Generationen.
+              Erding.<br />Ihr Traumpartner.
             </h2>
             <p className="font-body text-base text-white/65 md:text-lg">
-              Gegründet von Michael Hoser, weitergeführt von Dieter und Manfred Hoser,
-              heute geleitet von Claudia Hoser und Josef Lippacher.
+              Projektbau-Erding steht für Trockenbau und Altbausanierung auf höchstem Niveau –
+              zuverlässig, ehrlich und sauber. Mustafa und sein Team freuen sich auf Ihre Anfrage.
             </p>
             <div className="mt-8">
               <a

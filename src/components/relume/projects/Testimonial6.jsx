@@ -6,21 +6,21 @@ import { gsap } from "../../../utils/gsap";
 
 const testimonials = [
   {
-    quote: "Jedes Detail wurde sorgfältig umgesetzt, ohne Abstriche – und das Haus war pünktlich fertig, genau wie versprochen.",
-    name: "Klaus Müller",
-    role: "Bauherr, München",
+    quote: "Dank Mustafa und seinem Team war die Sanierung unserer Wohnung im Olympiadorf in München eine super Erfahrung und für mich als Architektin eine tolle Zusammenarbeit.",
+    name: "F. B.",
+    role: "Architektin, München · Google ★★★★★",
     img: "/images/hero-aerial-construction.jpg",
   },
   {
-    quote: "Wir waren skeptisch wegen der Sanierungskosten – aber die Festpreisgarantie hat uns vom ersten Tag an Sicherheit gegeben.",
-    name: "Maria Hoffmann",
-    role: "Eigentümerin, Augsburg",
+    quote: "Nach über zehn Jahren ohne Renovierung war die Zeit reif – die Fassade hatte es nötig. Das Ergebnis hat alle Erwartungen übertroffen. Sehr empfehlenswert!",
+    name: "Marion Robisch",
+    role: "Kundin · Google ★★★★★",
     img: "/images/craftsmen-stone-facade.jpg",
   },
   {
-    quote: "Regionales Know-how, professionelle Ausführung und ein Team, das wirklich zuhört.",
-    name: "Thomas Weber",
-    role: "Bauherr, Ingolstadt",
+    quote: "Wir haben unser Dachgeschoss ausbauen lassen und haben im Vorfeld sowie während des Trockenbaus, Innenausbaus und der Malerarbeiten hervorragend und freundlich beraten worden.",
+    name: "Jones Bein",
+    role: "Kunde · Google ★★★★★",
     img: "/images/villa-twilight.jpg",
   },
 ];
@@ -141,8 +141,8 @@ export function Testimonial6() {
             <div
               key={t.name}
               ref={(el) => (cardsRef.current[idx] = el)}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 p-8 backdrop-blur-md transition-all duration-500 hover:border-hoser-gold/40"
-              style={{ background: "rgba(255,255,255,0.05)" }}
+              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/15 p-8 backdrop-blur-md transition-all duration-500 hover:border-hoser-gold/40"
+              style={{ background: "rgba(255,255,255,0.07)" }}
             >
               {/* Decorative quote mark */}
               <span
