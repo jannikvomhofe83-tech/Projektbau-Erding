@@ -31,8 +31,8 @@ const navCols = [
       { label: "Beratung anfragen", to: "/kontakt" },
       { label: "FAQ", to: "/kontakt" },
       { label: "Auszeichnungen", to: "/auszeichnungen" },
-      { label: "Impressum", to: "#" },
-      { label: "Datenschutz", to: "#" },
+      { label: "Impressum", to: "/impressum" },
+      { label: "Datenschutz", to: "/datenschutz" },
     ],
   },
 ];
@@ -165,10 +165,10 @@ export function Footer() {
             © {new Date().getFullYear()} Projektbau-Erding. Alle Rechte vorbehalten.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="font-body text-xs text-[#08111F]/40 transition-colors duration-200 hover:text-[#08111F]/80">
+            <a href="/impressum" className="font-body text-xs text-[#08111F]/40 transition-colors duration-200 hover:text-[#08111F]/80">
               Impressum
             </a>
-            <a href="#" className="font-body text-xs text-[#08111F]/40 transition-colors duration-200 hover:text-[#08111F]/80">
+            <a href="/datenschutz" className="font-body text-xs text-[#08111F]/40 transition-colors duration-200 hover:text-[#08111F]/80">
               Datenschutz
             </a>
             <a href="#" className="font-body text-xs text-[#08111F]/40 transition-colors duration-200 hover:text-[#08111F]/80">

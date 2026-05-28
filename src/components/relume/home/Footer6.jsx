@@ -44,8 +44,8 @@ const footerLinks = [
   {
     heading: "Rechtliches",
     links: [
-      { label: "Impressum", href: "#" },
-      { label: "Datenschutz", href: "#" },
+      { label: "Impressum", href: "/impressum" },
+      { label: "Datenschutz", href: "/datenschutz" },
       { label: "AGB", href: "#" },
       { label: "Cookie-Einstellungen", href: "#" },
     ],
