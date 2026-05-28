@@ -144,6 +144,10 @@ export function HeroLeistungen() {
           <a
             ref={ctaRef}
             href="#leistungen"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("leistungen")?.scrollIntoView({ behavior: "smooth" });
+            }}
             className="group mt-10 flex items-center gap-5 w-fit"
           >
             <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-white/15 transition-colors duration-500 group-hover:border-hoser-gold">

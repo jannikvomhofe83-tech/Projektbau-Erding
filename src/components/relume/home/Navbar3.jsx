@@ -6,6 +6,7 @@ import clsx from "clsx";
 import React, { useState } from "react";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Leistungen", href: "/leistungen" },
   { label: "Projekte", href: "/projekte" },
   { label: "Über uns", href: "/ueber-uns" },
@@ -68,8 +69,14 @@ export function Navbar3() {
           </span>
         </a>
 
-        {/* Right: phone CTA */}
-        <div className="flex items-center justify-end">
+        {/* Right: Kontakt (mobile) + phone CTA (desktop) */}
+        <div className="flex items-center justify-end gap-3">
+          <a
+            href="/kontakt"
+            className="inline-flex lg:hidden items-center px-4 py-2 bg-hoser-gold font-body text-xs font-semibold tracking-wide text-white"
+          >
+            Kontakt
+          </a>
           <a
             href="tel:+4917683039047"
             className="hidden sm:inline-flex items-center gap-2 border border-border-primary px-5 py-2 font-body text-sm font-medium tracking-wide text-text-primary transition-colors duration-200 hover:border-text-primary"

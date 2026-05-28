@@ -41,24 +41,6 @@ const jobs = [
     ],
   },
   {
-    title: "Maler / Lackierer",
-    type: "Vollzeit",
-    location: "Raum Erding / München / Ebersberg",
-    desc: "Hochwertige Malerarbeiten innen und außen – Anstriche, Tapezieren, Fassadenanstriche und Beschichtungen bei Privat- und Gewerbekunden.",
-    anforderungen: [
-      "Abgeschlossene Ausbildung als Maler und Lackierer",
-      "Erfahrung in Innen- und Außenarbeiten",
-      "Qualitätsbewusstsein und Sauberkeit",
-      "Teamfähigkeit",
-    ],
-    bieten: [
-      "Übertarifliche Vergütung",
-      "Abwechslungsreiche Projekte",
-      "Familiäres Arbeitsklima",
-      "Direkter Kontakt zur Geschäftsführung",
-    ],
-  },
-  {
     title: "Fassadenmonteur",
     type: "Vollzeit",
     location: "Raum Erding / München / Ebersberg",

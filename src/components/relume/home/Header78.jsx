@@ -60,45 +60,12 @@ export function Header78() {
   }, []);
 
   useEffect(() => {
-    // Return visit → animate immediately. First visit → wait for intro screen (~5 s).
     const introShown =
       typeof window !== "undefined" &&
       sessionStorage.getItem("hoser-intro-shown") === "1";
-    const delay = introShown ? 0.1 : 5.0;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay, defaults: { ease: "power3.out" } });
-
-      // 1. Background: cinematic slow zoom-out (Ken Burns)
-      tl.from(".hero-bg-img", { scale: 1.08, duration: 3.5, ease: "power1.out" }, 0);
-
-      // 2. Eyebrow line extends left → right
-      tl.from(".hero-eyebrow-line", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        duration: 0.85,
-      }, 0.35);
-
-      // 3. Eyebrow text mask reveal
-      tl.from(".hero-eyebrow-inner", { y: "120%", duration: 0.65 }, 0.7);
-
-      // 4. Headline lines – mask reveal with stagger
-      tl.from(".hero-headline-inner", {
-        y: "110%",
-        stagger: 0.13,
-        duration: 1.15,
-      }, 0.95);
-
-      // 5. Body paragraph fades + slides up
-      tl.from(".hero-body", { y: 28, opacity: 0, duration: 0.85 }, 1.5);
-
-      // 6. CTA buttons staggered slide up
-      tl.from(".hero-cta", { y: 22, opacity: 0, stagger: 0.11, duration: 0.7 }, 1.85);
-
-      // 7. Scroll indicator fades in from left
-      tl.from(".hero-scroll", { opacity: 0, x: -18, duration: 0.65 }, 2.3);
-
-      // Parallax: background drifts upward as user scrolls away
+      // Parallax always runs regardless of visit type
       gsap.to(".hero-bg-img", {
         yPercent: -12,
         ease: "none",
@@ -109,6 +76,37 @@ export function Header78() {
           scrub: true,
         },
       });
+
+      if (introShown) {
+        // Return visit → show everything instantly, no animation
+        gsap.set(".hero-bg-img", { scale: 1 });
+        gsap.set(".hero-eyebrow-line", { scaleX: 1 });
+        gsap.set(".hero-eyebrow-inner", { y: "0%" });
+        gsap.set(".hero-headline-inner", { y: "0%" });
+        gsap.set(".hero-body", { y: 0, opacity: 1 });
+        gsap.set(".hero-cta", { y: 0, opacity: 1 });
+        gsap.set(".hero-scroll", { opacity: 1, x: 0 });
+        return;
+      }
+
+      // First visit → full cinematic animation after intro screen (~5 s)
+      const tl = gsap.timeline({ delay: 5.0, defaults: { ease: "power3.out" } });
+
+      tl.from(".hero-bg-img", { scale: 1.08, duration: 3.5, ease: "power1.out" }, 0);
+      tl.from(".hero-eyebrow-line", {
+        scaleX: 0,
+        transformOrigin: "left center",
+        duration: 0.85,
+      }, 0.35);
+      tl.from(".hero-eyebrow-inner", { y: "120%", duration: 0.65 }, 0.7);
+      tl.from(".hero-headline-inner", {
+        y: "110%",
+        stagger: 0.13,
+        duration: 1.15,
+      }, 0.95);
+      tl.from(".hero-body", { y: 28, opacity: 0, duration: 0.85 }, 1.5);
+      tl.from(".hero-cta", { y: 22, opacity: 0, stagger: 0.11, duration: 0.7 }, 1.85);
+      tl.from(".hero-scroll", { opacity: 0, x: -18, duration: 0.65 }, 2.3);
     }, sectionRef);
 
     return () => ctx.revert();
@@ -208,16 +206,16 @@ export function Header78() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-4">
+        <div className="inline-flex flex-col gap-3">
           <a
             href="/kontakt"
-            className="hero-cta inline-flex items-center gap-2 border border-white px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-white hover:text-background-alternative"
+            className="hero-cta flex items-center justify-between gap-2 border border-white px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-white hover:text-background-alternative"
           >
             Projekt anfragen <span>→</span>
           </a>
           <a
             href="/projekte"
-            className="hero-cta inline-flex items-center gap-2 border border-white px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-white hover:text-background-alternative"
+            className="hero-cta flex items-center justify-between gap-2 border border-white px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.12em] text-white transition-colors duration-200 hover:bg-white hover:text-background-alternative"
           >
             Referenzen ansehen <span>→</span>
           </a>

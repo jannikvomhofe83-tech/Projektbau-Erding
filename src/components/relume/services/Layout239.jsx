@@ -220,6 +220,7 @@ export function Layout239() {
   return (
     <section
       ref={sectionRef}
+      id="leistungen"
       className="bg-[#f0f0ef] px-[5%] py-16 md:py-24 lg:py-28"
     >
       <div className="container">
@@ -235,8 +236,8 @@ export function Layout239() {
           </p>
           <h2
             ref={headingRef}
-            className="font-heading font-bold leading-tight tracking-tight text-[#0a1020] whitespace-nowrap"
-            style={{ fontSize: "clamp(2rem, 4vw, 4rem)", willChange: "transform, opacity" }}
+            className="font-heading font-bold leading-tight tracking-tight text-[#0a1020]"
+            style={{ fontSize: "clamp(1.6rem, 5.5vw, 4rem)", willChange: "transform, opacity" }}
           >
             Sechs Leistungen. Ein Ansprechpartner.
           </h2>
@@ -245,7 +246,7 @@ export function Layout239() {
         {/* Cards grid */}
         <div
           ref={gridRef}
-          className="grid grid-cols-2 gap-3 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
           style={{ transformStyle: "preserve-3d" }}
         >
           {services.map((s, i) => (
@@ -260,7 +261,7 @@ export function Layout239() {
             >
               <div data-card-content>
               {/* Primary: image, gradient, number, title */}
-              <div data-card-primary className="relative h-36 overflow-hidden md:h-44">
+              <div data-card-primary className="relative h-52 overflow-hidden sm:h-36 md:h-44">
                 <img
                   data-card-image
                   src={s.image}
@@ -327,10 +328,10 @@ export function Layout239() {
         </div>
 
         {/* CTAs */}
-        <div ref={ctaWrapRef} className="mt-10 flex flex-wrap items-center gap-6 md:mt-14">
+        <div ref={ctaWrapRef} className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 md:mt-14">
           <a
             href="/kontakt"
-            className="inline-flex items-center bg-hoser-gold px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-opacity duration-200 hover:opacity-85"
+            className="inline-flex w-full items-center justify-center bg-hoser-gold px-8 py-4 font-body text-sm font-semibold uppercase tracking-[0.1em] text-white transition-opacity duration-200 hover:opacity-85 sm:w-auto sm:justify-start"
           >
             Projekt anfragen
           </a>

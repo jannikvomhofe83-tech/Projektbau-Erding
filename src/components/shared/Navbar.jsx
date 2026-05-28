@@ -9,6 +9,7 @@ import React, { useState } from "react";
 const HOUSE_PATH = "M6 20L24 6L42 20V42H30V30H18V42H6V20Z";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Leistungen", href: "/leistungen" },
   { label: "Projekte", href: "/projekte" },
   {
@@ -20,6 +21,7 @@ const navLinks = [
     ],
   },
   { label: "Prozess", href: "/prozess" },
+  { label: "Kontakt", href: "/kontakt" },
 ];
 
 function DropdownLink({ link, active }) {
