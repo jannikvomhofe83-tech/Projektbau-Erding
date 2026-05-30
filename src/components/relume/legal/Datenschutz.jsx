@@ -76,7 +76,7 @@ export function Datenschutz() {
       title: "Verantwortlicher",
       body: [
         "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
-        { strong: "Projektbau Erding / Mustafa Hoser" },
+        { strong: "Projektbau Erding / Mustafa Yigid" },
         "Erding, Bayern",
         { mixed: [
           "Telefon: ",

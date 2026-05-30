@@ -60,7 +60,7 @@ export function Impressum() {
             </h2>
             <div className="font-body text-base leading-relaxed text-white/75 space-y-1">
               <p className="font-semibold text-white">Projektbau Erding</p>
-              <p>Inhaber: Mustafa Hoser</p>
+              <p>Inhaber: Mustafa Yigid</p>
               <p>Erding, Bayern</p>
               <p>Deutschland</p>
             </div>
@@ -120,7 +120,7 @@ export function Impressum() {
               Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
             </h2>
             <div className="font-body text-base leading-relaxed text-white/75 space-y-1">
-              <p>Mustafa Hoser</p>
+              <p>Mustafa Yigid</p>
               <p>Erding, Bayern</p>
             </div>
           </div>
