@@ -60,8 +60,9 @@ export function Impressum() {
             </h2>
             <div className="font-body text-base leading-relaxed text-white/75 space-y-1">
               <p className="font-semibold text-white">Projektbau Erding</p>
-              <p>Inhaber: Mustafa Yigid</p>
-              <p>Erding, Bayern</p>
+              <p>Inhaber: Mustafa Yigid (Einzelunternehmen)</p>
+              <p>[Straße und Hausnummer]</p>
+              <p>[PLZ] Erding</p>
               <p>Deutschland</p>
             </div>
           </div>
@@ -108,7 +109,11 @@ export function Impressum() {
               Steuerangaben
             </h2>
             <div className="font-body text-base leading-relaxed text-white/75 space-y-1">
-              <p>Steuernummer: (wird nachgetragen)</p>
+              <p>Steuernummer: [Steuernummer eintragen]</p>
+              <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:
+                {" "}[USt-IdNr. eintragen – oder diese Zeile entfernen, falls Kleinunternehmer nach § 19 UStG]
+              </p>
             </div>
           </div>
 
@@ -121,7 +126,8 @@ export function Impressum() {
             </h2>
             <div className="font-body text-base leading-relaxed text-white/75 space-y-1">
               <p>Mustafa Yigid</p>
-              <p>Erding, Bayern</p>
+              <p>[Straße und Hausnummer]</p>
+              <p>[PLZ] Erding</p>
             </div>
           </div>
 
@@ -225,6 +231,19 @@ export function Impressum() {
               trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
               entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige
               Inhalte umgehend entfernen.
+            </p>
+          </div>
+
+          <div className="legal-block">
+            <h2
+              className="mb-4 font-heading text-lg font-bold uppercase tracking-[0.15em]"
+              style={{ color: "#C8962E" }}
+            >
+              Hinweis zu KI-generierten Inhalten
+            </h2>
+            <p className="font-body text-base leading-relaxed text-white/75">
+              Teile der Inhalte dieser Website (Texte und Bilder) wurden mit Unterstützung von
+              künstlicher Intelligenz erstellt und redaktionell geprüft.
             </p>
           </div>
 

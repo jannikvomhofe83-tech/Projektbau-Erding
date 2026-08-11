@@ -173,6 +173,10 @@ export function Footer() {
             </Link>
           </div>
         </div>
+
+        <p className="mt-4 font-body text-xs text-[#08111F]/40">
+          Teile der Inhalte dieser Website wurden mit Unterstützung von KI erstellt.
+        </p>
       </div>
     </footer>
   );
